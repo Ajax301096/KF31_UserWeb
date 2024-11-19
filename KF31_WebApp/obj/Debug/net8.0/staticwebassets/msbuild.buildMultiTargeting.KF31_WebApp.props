@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\KF31_WebApp.props" />
+</Project>
