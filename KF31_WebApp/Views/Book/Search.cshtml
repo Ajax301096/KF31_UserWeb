@@ -1,0 +1,79 @@
+﻿@model IEnumerable<KF31_WebApp.Models.Book>
+
+@{
+    ViewData["Title"] = "本";
+}
+<div class="book">
+
+    <div class="book_search">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <h3 class="search_title">本を検索</h3>
+                    </td>
+                    <td>
+                        <!-- Form 検索 -->
+                        <form method="get" action="@Url.Action("Search", "Book")">
+                            <input class="search_key" name="keyword" type="text" value="@ViewContext.HttpContext.Request.Query["keyword"]" placeholder="タイトル" />
+                            <input class="search_button" type="submit" value="検索" style="cursor:pointer;" />
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BookID)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Book_title)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CategoryID)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Book_Author)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PublisherID)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BookID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Book_title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CategoryID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Book_Author)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PublisherID)
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+
+
+
+
+        </table>
+    </div>
+</div>
+

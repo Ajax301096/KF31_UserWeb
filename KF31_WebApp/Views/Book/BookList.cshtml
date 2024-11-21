@@ -3,7 +3,28 @@
 @{
     ViewData["Title"] = "本";
 }
+<div class="book">
 
+<div class="book_search">
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <h3 class="search_title">本を検索</h3>
+                </td>
+                <td>
+                    <!-- Form 検索 -->
+                    <form method="get" action="@Url.Action("Search", "Book")">
+                        <input class="search_key" name="keyword" type="text" value="@ViewContext.HttpContext.Request.Query["keyword"]" placeholder="タイトル" />
+                        <input class="search_button" type="submit" value="検索" style="cursor:pointer;" />
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+   
+</div>
+<div>
 
 <table class="table">
     <thead>
@@ -53,3 +74,6 @@
 
 
 </table>
+</div>
+</div>
+

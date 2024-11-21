@@ -27,6 +27,18 @@ namespace KF31_WebApp.Controllers
 
             return View(book);
         }
+        public IActionResult Search(string keyword)
+        {
+            var book = _context.Books.ToList();
+
+            if (!string.IsNullOrEmpty(keyword))
+            {
+              var   books = _context.Books.Where(x => x.Book_title.Contains(keyword)); 
+                return View(books.ToList());
+            }
+            return View(book);
+
+        }
 
 
 
