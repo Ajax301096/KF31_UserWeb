@@ -249,6 +249,10 @@
       "PackagePath": "staticwebassets\\picture\\Header_Background.png"
     },
     {
+      "Id": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\header_Backgroun.jpg",
+      "PackagePath": "staticwebassets\\picture\\header_Backgroun.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.KF31_WebApp.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
