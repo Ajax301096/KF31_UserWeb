@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KF31_WebApp", "KF31_WebApp\KF31_WebApp.csproj", "{9626DC42-BBF9-4C1A-B045-0E84DF25EF23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KF31_WebApp", "KF31_WebApp\KF31_WebApp.csproj", "{9626DC42-BBF9-4C1A-B045-0E84DF25EF23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
