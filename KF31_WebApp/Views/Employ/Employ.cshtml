@@ -13,7 +13,7 @@
                 @Html.DisplayNameFor(model => model.EmployID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EmployName)
+                @Html.DisplayNameFor(model => model.Em_DisplayName)
             </th>
         </tr>
     </thead>
@@ -25,15 +25,14 @@
                     @Html.DisplayFor(modelItem => item.EmployID)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.EmployName)
+                    @Html.DisplayFor(modelItem => item.Em_DisplayName)
                 </td>
-
-                @* <td>
-            <a asp-action="ItemDetail" asp-route-id="@item.Code">
-            <img src="~/pictures/@item.Image">
-            </a>
-            </td> *@
+               
             </tr>
         }
     </tbody>
+    
+    
+
+
 </table>

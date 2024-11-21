@@ -6,6 +6,7 @@ namespace KF31_WebApp.Models
     {
         public KF31_LliM5_DataContext(DbContextOptions<KF31_LliM5_DataContext> options) : base(options){}
         public DbSet<Employ> Employs { get; set; }
+        public DbSet<Book> Books { get; set; }
         //public DbSet<Member> Members { get; set; }
         //public DbSet<Order> Orders { get; set; }
         //protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KF31_WebApp.Models
 {
-    [Table("Employ")]
+    [Table("Employee_table")]
     public class Employ
     {
 
@@ -13,7 +13,7 @@ namespace KF31_WebApp.Models
         public string EmployID { get; set; }
 
         [Display(Name = "社員名")]
-        public string EmployName { get; set; }
+        public string Em_DisplayName { get; set; }
 
       
     }

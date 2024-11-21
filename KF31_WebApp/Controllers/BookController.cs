@@ -7,10 +7,10 @@ using System.Text.Json;
 
 namespace KF31_WebApp.Controllers
 {
-    public class EmployController : Controller
+    public class BookController : Controller
     {
         private readonly KF31_LliM5_DataContext _context;
-        public EmployController(KF31_LliM5_DataContext context)
+        public BookController(KF31_LliM5_DataContext context)
         {
             _context = context;
         }
@@ -21,22 +21,16 @@ namespace KF31_WebApp.Controllers
         //    return View(items);
         //}
 
-        public IActionResult Employ(string id)
+        public IActionResult BookList(string id)
         {
-            var employ = _context.Employs
-                         .Select(e => new Employ
-                         {
-                             EmployID = e.EmployID,
-                             Em_DisplayName = e.Em_DisplayName
-                         })
-                         .ToList(); 
+            var book = _context.Books.ToList();
 
-            return View(employ); 
+            return View(book);
         }
 
-      
 
 
-        }
+
     }
+}
 
