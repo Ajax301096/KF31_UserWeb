@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "74nU6BcQUQoz1VY4i7antmJZjBFXEd5r7G1QFZ7oDz0=",
+  "Hash": "tBKZryqNeGVhsmFheOBlzRn4z+rGQdNiz6s06hwVhK8=",
   "Source": "KF31_WebApp",
   "BasePath": "_content/KF31_WebApp",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\Header_Background.png",
+      "SourceId": "KF31_WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\",
+      "BasePath": "_content/KF31_WebApp",
+      "RelativePath": "picture/Header_Background.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\picture\\Header_Background.png"
     }
   ]
 }
