@@ -21,27 +21,13 @@ namespace KF31_WebApp.Controllers
         //    return View(items);
         //}
 
-        //public IActionResult ItemList(string id)
-        //{
-        //    var items = _context.Where(i => i.TypeCode == id).Select(i => i);
-        //    return View(items);
-        //}
+        public IActionResult EmployList(string id)
+        {
+            var employ = _context.Employs.Where(i => i.EmployID == id).Select(i => i);
+            return View(employ);
+        }
 
-        //public IActionResult ItemDetail(string id)
-        //{
-        //    var item = _context.Items.Where(i => i.Code == id).Select(i => i).FirstOrDefault();
-
-        //    ItemDetailViewModel viewmodel = new ItemDetailViewModel();
-        //    viewmodel.Code = item.Code;
-        //    viewmodel.Name = item.Name;
-        //    viewmodel.Price = item.Price;
-        //    viewmodel.TypeCode = item.TypeCode;
-        //    viewmodel.Material = item.Material;
-        //    viewmodel.Image = item.Image;
-        //    viewmodel.Stock = item.Stock;
-        //    viewmodel.Quantity = null;
-        //    return View(viewmodel);
-        //}
+      
 
 
         //[HttpPost]
@@ -75,6 +61,6 @@ namespace KF31_WebApp.Controllers
         //    HttpContext.Session.SetString("ShoppingCart", json);
 
         //    return RedirectToAction("Cart", "Cart");
-        //}
+        }
     }
-}
+

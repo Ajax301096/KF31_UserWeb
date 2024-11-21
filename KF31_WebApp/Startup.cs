@@ -19,11 +19,11 @@ namespace KF31_WebApp
             services.AddControllersWithViews();
             services.AddDbContext<KF31_LliM5_DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("KF31DBConnectionString")));
             services.AddSession();
-            services.AddAuthentication("Cookie").AddCookie("Cookie",
-                       options =>
-                       {
-                           options.LoginPath = "/Login/Login";
-                       });
+            //services.AddAuthentication("Cookie").AddCookie("Cookie",
+            //           options =>
+            //           {
+            //               options.LoginPath = "/Login/Login";
+            //           });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

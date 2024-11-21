@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KF31_WebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99e5649ac74f95ad9c22df125bab3587bc984576")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7adde846e6b4e2fc927ce0a80b56018e0fe5da07")]
 [assembly: System.Reflection.AssemblyProductAttribute("KF31_WebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KF31_WebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

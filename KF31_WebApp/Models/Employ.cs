@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KF31_WebApp.Models
 {
-    [Table("Item")]
+    [Table("Employ")]
     public class Employ
     {
 
