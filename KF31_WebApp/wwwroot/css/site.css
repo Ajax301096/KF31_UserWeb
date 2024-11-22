@@ -13,21 +13,24 @@
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', HiraKakuPro-W3, Osaka, メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background: #ebeae8;
+    height: 3000px;
 }
 .login_button{
-     margin-left:905px;
+     margin-left:605px;
      
 }
 
 nav.navbar {
     width: 100%;
-    max-width: 1100px;
+    max-width: 800px;
     margin: 0 auto;
     height: 245px;
     display: flex;
@@ -82,31 +85,61 @@ ul.menu_headerflat li
         float: none;
         display: table-cell;
  }
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background: #fcfcfc;
+}
 
 /*Book*/
-div .book{
-    display:flex;
-    justify-content:center;
-    flex-direction:column;
+div .book {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background: #fcfcfc;
 }
-
+.book_search_background {
+/*    margin : 30px auto;
+    width:800px;
+    max-width:800px;*/
+}
 .book_search {
-    margin-left: 300px;
     width: 500px;
     height: 55px;
-    border-radius: 20px;
-    background: #09daed;
+    margin:10px auto;
+    border-radius: 5px;
+    background: #db9cc7;
     display: flex;
-    flex-direction: row;
-    justify-content:center;
+    flex-direction: column;
+    justify-content: center;
 }
-.search_title {
+.book_search a{
+    margin-left:330px;
+}
+.book_list {
+    margin: 50px 150px 0 150px;
+    max-width:700px;
     font-size: 15px;
-    padding-top:6px;
+    border: 0.5px solid #9c9a9c;
+    background: #fcfcfc;
+}
+.search_form{
+    margin:auto;
 }
 .search_button {
     border-radius: 10px;
-    background: #2da15b;
+    background: #d663b1;
     color: aliceblue;
     border: none;
     width: 50px;
@@ -114,4 +147,92 @@ div .book{
 .search_key {
     border-radius: 10px;
     border: none;
+    width:300px;
+}
+
+
+/*footer*/
+footer {
+    background:#db9cc7;
+    max-height:120px;
+}
+footer .container {
+    background: #db9cc7;
+}
+
+
+/*ログイン*/
+
+.login {
+    max-width: 800px;
+    height:470px;
+    margin: auto;
+    background: #fcfcfc;
+    border: 1px solid #b3b1b2;
+    margin-bottom:-16px;
+}
+.login_tite {
+    max-width: 700px;
+    height: 50px;
+    margin: 10px auto;
+    background: #f6f6f6 url(/webopac_i_ja/image/default/com/bg_title01.png) left bottom repeat-x;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+.login_tite h6 {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', HiraKakuPro-W3, Osaka, メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    margin-top: 15px;
+    margin-left:25px;
+    font-size:20px;
+}
+.login p{
+    font-size:12.8px;
+    margin-left:50px;
+}
+.login_form{
+    max-width:400px;
+    margin:20px 0 0 100px;
+    display:flex;
+    flex-direction:column;
+}
+.form-group{
+    display:flex;
+    flex-direction:row;
+}
+.form-group label{
+    width:150px;
+}
+.form-group input{
+    max-width:150px;
+    height:20px;
+    margin-right:0px;
+}
+.border_div{
+    width:600px;
+    height:1px;
+    margin:30px auto;
+    border:1px solid #cccc;
+}
+.button_div{
+    margin-left:200px;
+    margin-top:-5px;
+}
+.login_form .btn {
+    width: 80px;
+    height: 30px;
+    background: #d6ced2;
+    border: 1px solid #d6ced2;
+    padding-top:2px;
+}
+.copyright {
+    height: 30px;
+    margin-top:53px;
+    background: #51ab3f;
+    border : 0.2px solid #cccc;
+    padding-top:2px;
+}
+.login p{
+    font-size:12.8px;
+    margin-left:50px;
+    margin-bottom:-2px;
 }
