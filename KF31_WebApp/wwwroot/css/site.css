@@ -20,14 +20,15 @@ html {
 
 body {
     margin-bottom: 60px;
-    background: #ebeae8;
+    background: #f4f4f4;
     height: 3000px;
+    overflow: visible;
 }
 .login_button{
      margin-left:605px;
      
 }
-
+/*navigation*/
 nav.navbar {
     width: 100%;
     max-width: 800px;
@@ -43,6 +44,19 @@ nav.navbar {
     width:1100px;
 }
 
+.dropdown-menu {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 605px;
+}
+.dropdown-menu li {
+        display: inline-block;
+        position: relative;
+        margin-right: 20px;
+}
+.dropdown{
+    width:auto;
+}
 .container-fluid{
     padding-left:0;
     padding-right:0;
@@ -235,4 +249,69 @@ footer .container {
     font-size:12.8px;
     margin-left:50px;
     margin-bottom:-2px;
+}
+
+
+/*アカウント*/
+.account{
+    display:flex;
+    flex-direction:column;
+    max-width:800px;
+    margin:0 auto;
+    border:1px solid #cccc;
+    padding-top:30px;
+    padding-left:20px;
+    height:auto;
+    margin-bottom:-16px;
+}
+.account h5{
+    font-size:32px;
+}
+.account_title_1 p{
+    margin-top:15px;
+    font-size:15px;
+}
+.account_title_1, .account_body{
+    display:flex;
+    flex-direction:column;
+}
+.account_title_1 div{
+    width:700px;
+    margin:20px auto;
+    border : 0.5px solid #cccc;
+}
+.account_title_2 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom:30px;
+}
+.account_title_2 h5{
+    font-size:25px;
+    
+}
+.account_title_2 a {
+        font-size: 12px;
+        width: 168px;
+        height: 32px;
+        border-radius: 10px;
+        border: 1px solid #cccc;
+        margin-left: 400px;
+        margin-top: 10px;
+        padding-left: 40px;
+        padding-top: 6px;
+}
+.account_body{
+    margin-left:10px;
+}
+.back_btn {
+    font-size: 15px;
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #0e0303;
+    margin-left: 250px;
+    margin-top: 10px;
+    padding-top: 7px;
+    padding-left: 86px;
+    margin-bottom:20px;
 }

@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\hoany\OneDrive\Máy tính\各部の提出宿題\システム開発演習２\KF31_WebApp\KF31_WebApp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/Account/Account.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/Book/BookList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xCb29rTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="~/KF31_WebApp.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>       
+    <header>  
+        @{
+            var userId = Context.Session.GetString("UserId");  // Lấy thông tin người dùng từ Session
+        }
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="nav-background">
                 <img class="header-image" src="~/picture/header_Backgroun.jpg" />
@@ -22,10 +25,32 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="BookList">蔵書検索</a>
-                        </li>                     
-                        <li class="nav-item">
-                            <a class="nav-link text-dark login_button" asp-area="" asp-controller="Login" asp-action="Login">ログイン</a>
                         </li>
+                        @if (userId == null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark login_button" asp-area="" asp-controller="Login" asp-action="Login">ログイン</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-dark login_button dropdown-toggle" asp-area="" asp-controller="Login" asp-action="Login" data-toggle="dropdown">
+                                    アカウント
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark login_button" asp-area="" asp-controller="Login" asp-action="Login">アカウント</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark login_button" asp-area="" asp-controller="Login" asp-action="Login">アカウント</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark login_button" asp-area="" asp-controller="Login" asp-action="Login">アカウント</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
