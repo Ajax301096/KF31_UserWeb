@@ -28,38 +28,81 @@ body {
      margin-left:605px;
      
 }
-/*navigation*/
+.custom-item {
+    margin-left: 548px;
+    width: 120px;
+    height: 40px;
+    border-style: none;
+    padding: 10px;
+    
+}
+.custom-item a {
+        padding-top: 5px;
+        padding-left: 10px;
+}
+.custom-item .custom-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    background-color: #f8f9fa; 
+    position: absolute; 
+    z-index: 10;
+    
+}
+
+
+.custom-item:hover .custom-menu {
+    display: flex; 
+    flex-direction: column; 
+    margin-top:5px;
+}
+
+
+.custom-menu .custom-sub-item {
+    width: 119px;
+    height: 40px;
+}
+
+
+.custom-link {
+    text-decoration: none; 
+    color: #333; 
+    display: block; 
+}
+
+.custom-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav li:hover, .custom-item:hover, .custom-menu li:hover {
+    color: #007bff;
+    background: #fcfcfc;
+}
+.header-image{
+    width:800px;
+    margin-left:150px;
+}
 nav.navbar {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    height: 245px;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding: 0;
-    overflow: hidden; 
     position: relative;
 }
 .nav-background{
     width:1100px;
 }
+.dropdowm{
+    display:inline-block;
+    position:relative;
+}
 
-.dropdown-menu {
-    list-style-type: none;
-    padding: 0;
-    margin-left: 605px;
-}
-.dropdown-menu li {
-        display: inline-block;
-        position: relative;
-        margin-right: 20px;
-}
-.dropdown{
-    width:auto;
-}
-.container-fluid{
-    padding-left:0;
-    padding-right:0;
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
 }
 ul.menu_headerflat {
     border-top: 5px solid #c7816f;
@@ -98,6 +141,7 @@ ul.menu_headerflat li
         padding: 0px;
         float: none;
         display: table-cell;
+        margin-top:1px;
  }
 .container {
     width: 100%;
@@ -234,9 +278,12 @@ footer .container {
 .login_form .btn {
     width: 80px;
     height: 30px;
-    background: #d6ced2;
+    background: #a33659;
     border: 1px solid #d6ced2;
     padding-top:2px;
+}
+.login_form .btn:hover{
+    background:#9e7373;
 }
 .copyright {
     height: 30px;

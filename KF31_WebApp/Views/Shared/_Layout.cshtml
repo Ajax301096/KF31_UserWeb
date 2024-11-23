@@ -34,19 +34,20 @@
                         }
                         else
                         {
-                            <li class="nav-item dropdown">
-                                <a class="nav-link text-dark login_button dropdown-toggle" asp-area="" asp-controller="Login" asp-action="Login" data-toggle="dropdown">
-                                    アカウント
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a class="nav-link text-dark login_button" asp-area="" asp-controller="Login" asp-action="Login">アカウント</a>
+                            <li class="custom-item">
+                                <a class="custom-link" asp-area="" asp-controller="Login" asp-action="Login">アカウント</a>
+                                <ul class="custom-menu">
+                                    <li class="custom-sub-item">
+                                        <a class="custom-link" asp-area="" asp-controller="Login" asp-action="Login">予約履歴</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-dark login_button" asp-area="" asp-controller="Login" asp-action="Login">アカウント</a>
+                                    <li class="custom-sub-item">
+                                        <a class="custom-link" asp-area="" asp-controller="Login" asp-action="Login">貸出履歴</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-dark login_button" asp-area="" asp-controller="Login" asp-action="Login">アカウント</a>
+                                    <li class="custom-sub-item">
+                                        <a class="custom-link" asp-area="" asp-controller="Login" asp-action="Login">パスワード変更</a>
+                                    </li>
+                                    <li class="custom-sub-item">
+                                        <a class="custom-link" asp-area="" asp-controller="Login" asp-action="Login">ログアウト</a>
                                     </li>
                                 </ul>
                             </li>
