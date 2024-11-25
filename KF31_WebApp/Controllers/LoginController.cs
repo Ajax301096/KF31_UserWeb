@@ -21,6 +21,7 @@ namespace KF31_WebApp.Controllers
 
             return View();
         }
+
         [HttpPost]
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> Login(LoginViewModel member)

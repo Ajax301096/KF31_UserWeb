@@ -28,7 +28,7 @@
                         </li>
                         @if (userId == null)
                         {
-                            <li class="nav-item">
+                            <li class="nav-item login_btn_li">
                                 <a class="nav-link text-dark login_button" asp-area="" asp-controller="Login" asp-action="Login">ログイン</a>
                             </li>
                         }
@@ -44,7 +44,7 @@
                                         <a class="custom-link" asp-area="" asp-controller="Login" asp-action="Login">貸出履歴</a>
                                     </li>
                                     <li class="custom-sub-item">
-                                        <a class="custom-link" asp-area="" asp-controller="Login" asp-action="Login">パスワード変更</a>
+                                        <a class="custom-link" asp-area="" asp-controller="Account" asp-action="PasswordUpdate">パスワード変更</a>
                                     </li>
                                     <li class="custom-sub-item">
                                         <a class="custom-link" asp-area="" asp-controller="Login" asp-action="Login">ログアウト</a>

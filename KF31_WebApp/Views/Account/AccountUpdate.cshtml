@@ -11,13 +11,13 @@
             こちらの内容はKF31 図書館で共通です。編集を行った場合はカード・アカウント双方のアカウントへ反映されます。
         </p>
         <div></div>
-    </div>   
+    </div>
 
     <div class="account_title_2">
         <h5>
             会員情報詳細
         </h5>
-        <a class="custom-link account-update" asp-area="" asp-controller="Account" asp-action="AccountUpdate">会員情報変更</a>
+        <a>会員情報の変更</a>
     </div>
 
     <div class="account_body">
@@ -46,9 +46,11 @@
             <label>住所</label>
             <p>@Model.address</p>
         </div>
-            <a href="javascript:history.back()" class="back_btn">トップに戻る</a>
+        <div class="back_btn">
+            <a>トップに戻る</a>
+        </div>
     </div>
-   
+
 </div>
 @section Scripts {
     @{

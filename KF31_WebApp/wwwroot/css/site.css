@@ -25,8 +25,8 @@ body {
     overflow: visible;
 }
 .login_button{
-     margin-left:605px;
-     
+/*     margin-left:605px;
+     */
 }
 .custom-item {
     margin-left: 548px;
@@ -49,12 +49,15 @@ body {
     z-index: 10;
     
 }
-
+.login_btn_li {
+    margin-left:568px;
+    width:100px;
+}
 
 .custom-item:hover .custom-menu {
-    display: flex; 
-    flex-direction: column; 
-    margin-top:5px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
 }
 
 
@@ -92,6 +95,7 @@ nav.navbar {
     padding: 0;
     position: relative;
 }
+
 .nav-background{
     width:1100px;
 }
@@ -288,6 +292,7 @@ footer .container {
 .copyright {
     height: 30px;
     margin-top:53px;
+
     background: #51ab3f;
     border : 0.2px solid #cccc;
     padding-top:2px;
@@ -347,9 +352,13 @@ footer .container {
         padding-left: 40px;
         padding-top: 6px;
 }
-.account_body{
-    margin-left:10px;
+.account_title_2 a:hover, .back_btn:hover{
+    background:#333;
+    color:#fff;
 }
+.account_body {
+        margin-left: 10px;
+    }
 .back_btn {
     font-size: 15px;
     width: 250px;
@@ -361,4 +370,9 @@ footer .container {
     padding-top: 7px;
     padding-left: 86px;
     margin-bottom:20px;
+    color:#333;
+    text-decoration:none;
+
 }
+
+/*アカウント情報変更*/
