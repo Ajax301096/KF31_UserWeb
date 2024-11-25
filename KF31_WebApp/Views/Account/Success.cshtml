@@ -1,5 +1,28 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿
 @{
+    ViewData["Title"] = "PassWord";
+}
+
+
+<div class="login">
+    <div class="login_tite">
+        <h6>パスワード変更</h6>
+    </div>
+ 
+   
+    <div class="border_div"></div>
+    <p class="login_title_last">KF31_図書館</p>
+    <div class="copyright">
+        <p>
+            Copyright c 2024- OSAKA KF31_LliM5
+        </p>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

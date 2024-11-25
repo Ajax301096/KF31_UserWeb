@@ -374,5 +374,100 @@ footer .container {
     text-decoration:none;
 
 }
+/*パスワード変更*/
+.password_update_form{
+    display:flex;
+    width:600px;
+}
+
+.password {
+    max-width: 800px;
+    height: 480px;
+    margin: auto;
+    background: #fcfcfc;
+    border: 1px solid #b3b1b2;
+    margin-bottom: -16px;
+}
+
+.update_tite {
+    max-width: 700px;
+    height: 50px;
+    margin: 10px auto;
+    background: #f6f6f6 url(/webopac_i_ja/image/default/com/bg_title01.png) left bottom repeat-x;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+    .update_tite h6 {
+        font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', HiraKakuPro-W3, Osaka, メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+        margin-top: 15px;
+        margin-left: 25px;
+        font-size: 20px;
+    }
+
+.password p {
+    font-size: 12.8px;
+    margin-left: 50px;
+}
+
+.pass_update_form {
+    max-width: 400px;
+    margin: 20px 0 0 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+}
+
+    .form-group label {
+        width: 150px;
+    }
+
+    .form-group input {
+        max-width: 150px;
+        height: 20px;
+        margin-right: 0px;
+    }
+
+.border_div {
+    width: 600px;
+    height: 1px;
+    margin: 30px auto;
+    border: 1px solid #cccc;
+}
+
+.button_div {
+    margin-left: 200px;
+    margin-top: -5px;
+}
+
+.pass_update_form .btn {
+    width: 80px;
+    height: 30px;
+    background: #a33659;
+    border: 1px solid #d6ced2;
+    padding-top: 2px;
+}
+
+    .pass_update_form .btn:hover {
+        background: #9e7373;
+    }
+
+.copyright {
+    height: 30px;
+    margin-top: 53px;
+    background: #51ab3f;
+    border: 0.2px solid #cccc;
+    padding-top: 2px;
+}
+
+.password p {
+    font-size: 12.8px;
+    margin-left: 50px;
+    margin-bottom: -2px;
+}
 
 /*アカウント情報変更*/
