@@ -17,7 +17,7 @@
         <h5>
             会員情報詳細
         </h5>
-        <a>会員情報の変更</a>
+        <a>トップへ戻る</a>
     </div>
 
     <div class="account_body update_form">
@@ -32,9 +32,7 @@
                 <input asp-for="DisplayName" class="form-control" value=@Model.DisplayName />
         </div>
         <div>
-        <label>
-                    生年月日(※生年月日は一度登録いただくと変更できません)
-        </label>
+        <label> 生年月日(※生年月日は一度登録いただくと変更できません)</label>
             <p>@Model.Birthday.ToString("yyyy/MM/dd")</p>
         </div>
 
@@ -50,11 +48,11 @@
             <label>住所</label>
                 <input asp-for="address" class="form-control" value=@Model.address />
         </div>
-            <input type="submit" value="変更する" class="btn btn-primary" />
-        </form>
-        <div class="back_btn">
-            <a>トップに戻る</a>
+        <div class="update_btn">
+                <input type="submit" value="変更する" class="submit_btn update_btn1" />
         </div>
+        </form>
+       
     </div>
 
 </div>

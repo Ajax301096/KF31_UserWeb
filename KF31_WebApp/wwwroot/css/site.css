@@ -531,6 +531,44 @@ footer .container {
         color: #fff;
 }
 /*アカウント情報変更*/
-.account_update input{
-    width:500px;
+.account_update{
+    height:1000px;
+}
+.account_update input {
+    width: 500px;
+}
+.update_form div {
+    margin-top: 20px;
+}
+.update_form div label{
+    margin-bottom:10px;
+}
+.update_btn {
+    display:flex;
+}
+.update_btn .btn{
+    width:120px;
+}
+.update_btn .submit_btn{
+    border-radius:10px;
+    border:1px solid #ccc;
+    width:120px;
+    height:50px;
+}
+.update_btn2 {
+    text-decoration: none;
+    padding-top: 12px;
+    padding-left: 20px;
+    color: #333;
+    margin-top: 30px;
+    margin-left:250px;
+}
+.update_btn1{
+    background-color:#fff;
+    margin-top:30px;
+}
+.update_btn1:hover , .update_btn2:hover{
+    background-color:#333;
+    color:#fff;
+    cursor:pointer;
 }
