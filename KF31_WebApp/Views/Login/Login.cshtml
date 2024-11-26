@@ -21,7 +21,9 @@
             <div class="form-group">
                 <label asp-for="Password" class="control-label">パスワード</label>
                 <input asp-for="Password" class="form-control" type="password" />
+
             </div>
+                <span asp-validation-for="Password" class="text-danger"></span>
             <div class="border_div"></div>
             <div class="button_div">
 

@@ -39,10 +39,14 @@
         <div>
             <label>メールアドレス</label>
                 <input asp-for="mail" class="form-control" value=@Model.mail />
+                <span asp-validation-for="mail" class="text-danger"></span>
+
         </div>
         <div>
             <label>携帯番号</label>
                 <input asp-for="Tell" class="form-control" value=@Model.Tell />
+                <span asp-validation-for="Tell" class="text-danger"></span>
+
         </div>
         <div>
             <label>住所</label>

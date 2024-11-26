@@ -21,54 +21,22 @@
     </div>
 <div class="book_list">
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.BookID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Book_title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CategoryID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Book_Author)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PublisherID)
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.BookID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Book_title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CategoryID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Book_Author)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PublisherID)
-                </td>
-
-            </tr>
-        }
-    </tbody>
-
-
-
-
-</table>
+ @foreach (var item in Model)
+  {
+      <div class="book_tag">
+         <div class="book_img">
+            <img src="~/picture/book_01_orange.png">
+         </div>
+         <div class="book_bor"></div>
+         <div class="book_news">
+                    <p>タイトル: @Html.DisplayFor(modelItem => item.Book_title)</p>
+                    <p>著者：@Html.DisplayFor(modelItem => item.Book_Author)</p>
+         </div>
+         <div class="detail_btn"><a class="detail_btn_a">詳細</a></div>
+      </div>
+         
+   }
+   
 </div>
 </div>
 

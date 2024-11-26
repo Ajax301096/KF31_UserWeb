@@ -1,15 +1,15 @@
 ﻿html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
@@ -24,34 +24,37 @@ body {
     height: 3000px;
     overflow: visible;
 }
-.login_button{
-/*     margin-left:605px;
+
+.login_button {
+    /*     margin-left:605px;
      */
 }
+
 .custom-item {
     margin-left: 548px;
     width: 120px;
     height: 40px;
     border-style: none;
     padding: 10px;
-    
 }
-.custom-item a {
+
+    .custom-item a {
         padding-top: 5px;
         padding-left: 10px;
-}
-.custom-item .custom-menu {
-    display: none;
-    list-style: none;
-    padding: 0;
-    background-color: #f8f9fa; 
-    position: absolute; 
-    z-index: 10;
-    
-}
+    }
+
+    .custom-item .custom-menu {
+        display: none;
+        list-style: none;
+        padding: 0;
+        background-color: #f8f9fa;
+        position: absolute;
+        z-index: 10;
+    }
+
 .login_btn_li {
-    margin-left:568px;
-    width:100px;
+    margin-left: 568px;
+    width: 100px;
 }
 
 .custom-item:hover .custom-menu {
@@ -68,23 +71,25 @@ body {
 
 
 .custom-link {
-    text-decoration: none; 
-    color: #333; 
-    display: block; 
+    text-decoration: none;
+    color: #333;
+    display: block;
 }
 
 .custom-menu {
     transition: all 0.3s ease-in-out;
 }
 
-.navbar-nav li:hover, .custom-item:hover, .custom-menu li:hover {
-    color: #007bff;
-    background: #fcfcfc;
+    .navbar-nav li:hover, .custom-item:hover, .custom-menu li:hover {
+        color: #007bff;
+        background: #fcfcfc;
+    }
+
+.header-image {
+    width: 800px;
+    margin-left: 150px;
 }
-.header-image{
-    width:800px;
-    margin-left:150px;
-}
+
 nav.navbar {
     width: 100%;
     max-width: 800px;
@@ -96,18 +101,20 @@ nav.navbar {
     position: relative;
 }
 
-.nav-background{
-    width:1100px;
+.nav-background {
+    width: 1100px;
 }
-.dropdowm{
-    display:inline-block;
-    position:relative;
+
+.dropdowm {
+    display: inline-block;
+    position: relative;
 }
 
 .container-fluid {
     padding-left: 0;
     padding-right: 0;
 }
+
 ul.menu_headerflat {
     border-top: 5px solid #c7816f;
     border-bottom: 1px solid #F3F3F3;
@@ -126,6 +133,7 @@ ul.menu_headerflat {
     padding: 0;
     margin: 0;
 }
+
 ul {
     list-style-type: disc;
     margin-block-start: 1em;
@@ -135,8 +143,8 @@ ul {
     padding-inline-start: 40px;
     unicode-bidi: isolate;
 }
-ul.menu_headerflat li 
-{
+
+    ul.menu_headerflat li {
         background: #F1EFE3 none repeat-x scroll left bottom;
         border-color: transparent #cccccc #DCDBD6 #f2f3ee;
         border-style: solid;
@@ -145,8 +153,9 @@ ul.menu_headerflat li
         padding: 0px;
         float: none;
         display: table-cell;
-        margin-top:1px;
- }
+        margin-top: 1px;
+    }
+
 .container {
     width: 100%;
     max-width: 800px;
@@ -159,80 +168,29 @@ ul.menu_headerflat li
     background: #fcfcfc;
 }
 
-/*Book*/
-div .book {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    overflow: hidden;
-    position: relative;
-    background: #fcfcfc;
-}
-.book_search_background {
-/*    margin : 30px auto;
-    width:800px;
-    max-width:800px;*/
-}
-.book_search {
-    width: 500px;
-    height: 55px;
-    margin:10px auto;
-    border-radius: 5px;
-    background: #db9cc7;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.book_search a{
-    margin-left:330px;
-}
-.book_list {
-    margin: 50px 150px 0 150px;
-    max-width:700px;
-    font-size: 15px;
-    border: 0.5px solid #9c9a9c;
-    background: #fcfcfc;
-}
-.search_form{
-    margin:auto;
-}
-.search_button {
-    border-radius: 10px;
-    background: #d663b1;
-    color: aliceblue;
-    border: none;
-    width: 50px;
-}
-.search_key {
-    border-radius: 10px;
-    border: none;
-    width:300px;
-}
-
 
 /*footer*/
 footer {
-    background:#db9cc7;
-    max-height:120px;
-}
-footer .container {
     background: #db9cc7;
+    max-height: 120px;
 }
+
+    footer .container {
+        background: #db9cc7;
+    }
 
 
 /*ログイン*/
 
 .login {
     max-width: 800px;
-    height:470px;
+    height: 470px;
     margin: auto;
     background: #fcfcfc;
     border: 1px solid #b3b1b2;
-    margin-bottom:-16px;
+    margin-bottom: -16px;
 }
+
 .login_tite {
     max-width: 700px;
     height: 50px;
@@ -241,107 +199,124 @@ footer .container {
     border-radius: 10px;
     border: 1px solid #ccc;
 }
-.login_tite h6 {
-    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', HiraKakuPro-W3, Osaka, メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-    margin-top: 15px;
-    margin-left:25px;
-    font-size:20px;
+
+    .login_tite h6 {
+        font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', HiraKakuPro-W3, Osaka, メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+        margin-top: 15px;
+        margin-left: 25px;
+        font-size: 20px;
+    }
+
+.login p {
+    font-size: 12.8px;
+    margin-left: 50px;
 }
-.login p{
-    font-size:12.8px;
-    margin-left:50px;
+
+.login_form {
+    max-width: 400px;
+    margin: 20px 0 0 100px;
+    display: flex;
+    flex-direction: column;
 }
-.login_form{
-    max-width:400px;
-    margin:20px 0 0 100px;
-    display:flex;
-    flex-direction:column;
+
+.form-group {
+    display: flex;
+    flex-direction: row;
 }
-.form-group{
-    display:flex;
-    flex-direction:row;
+
+    .form-group label {
+        width: 150px;
+    }
+
+    .form-group input {
+        max-width: 150px;
+        height: 20px;
+        margin-right: 0px;
+    }
+
+.border_div {
+    width: 600px;
+    height: 1px;
+    margin: 30px auto;
+    border: 1px solid #cccc;
 }
-.form-group label{
-    width:150px;
+
+.button_div {
+    margin-left: 200px;
+    margin-top: -5px;
 }
-.form-group input{
-    max-width:150px;
-    height:20px;
-    margin-right:0px;
-}
-.border_div{
-    width:600px;
-    height:1px;
-    margin:30px auto;
-    border:1px solid #cccc;
-}
-.button_div{
-    margin-left:200px;
-    margin-top:-5px;
-}
+
 .login_form .btn {
     width: 80px;
     height: 30px;
     background: #a33659;
     border: 1px solid #d6ced2;
-    padding-top:2px;
+    padding-top: 2px;
 }
-.login_form .btn:hover{
-    background:#9e7373;
-}
+
+    .login_form .btn:hover {
+        background: #9e7373;
+    }
+
 .copyright {
     height: 30px;
-    margin-top:53px;
-
+    margin-top: 53px;
     background: #51ab3f;
-    border : 0.2px solid #cccc;
-    padding-top:2px;
+    border: 0.2px solid #cccc;
+    padding-top: 2px;
 }
-.login p{
-    font-size:12.8px;
-    margin-left:50px;
-    margin-bottom:-2px;
+
+.login p {
+    font-size: 12.8px;
+    margin-left: 50px;
+    margin-bottom: -2px;
 }
 
 
 /*アカウント*/
-.account{
-    display:flex;
-    flex-direction:column;
-    max-width:800px;
-    margin:0 auto;
-    border:1px solid #cccc;
-    padding-top:30px;
-    padding-left:20px;
-    height:auto;
-    margin-bottom:-16px;
+.account {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #cccc;
+    padding-top: 30px;
+    padding-left: 20px;
+    height: auto;
+    margin-bottom: -16px;
 }
-.account h5{
-    font-size:32px;
+
+    .account h5 {
+        font-size: 32px;
+    }
+
+.account_title_1 p {
+    margin-top: 15px;
+    font-size: 15px;
 }
-.account_title_1 p{
-    margin-top:15px;
-    font-size:15px;
+
+.account_title_1, .account_body {
+    display: flex;
+    flex-direction: column;
 }
-.account_title_1, .account_body{
-    display:flex;
-    flex-direction:column;
-}
-.account_title_1 div{
-    width:700px;
-    margin:20px auto;
-    border : 0.5px solid #cccc;
-}
+
+    .account_title_1 div {
+        width: 700px;
+        margin: 20px auto;
+        border: 0.5px solid #cccc;
+    }
+
 .account_title_2 {
     display: flex;
     flex-direction: row;
-    margin-bottom:30px;
+    margin-bottom: 30px;
 }
-.account_title_2 h5{
-    font-size:25px;
-    
-}
-.account_title_2 a {
+
+    .account_title_2 h5 {
+        font-size: 25px;
+    }
+
+    .account_title_2 a {
         font-size: 12px;
         width: 168px;
         height: 32px;
@@ -351,14 +326,17 @@ footer .container {
         margin-top: 10px;
         padding-left: 40px;
         padding-top: 6px;
-}
-.account_title_2 a:hover, .back_btn:hover{
-    background:#333;
-    color:#fff;
-}
-.account_body {
-        margin-left: 10px;
     }
+
+        .account_title_2 a:hover, .back_btn:hover {
+            background: #333;
+            color: #fff;
+        }
+
+.account_body {
+    margin-left: 10px;
+}
+
 .back_btn {
     font-size: 15px;
     width: 250px;
@@ -369,15 +347,14 @@ footer .container {
     margin-top: 10px;
     padding-top: 7px;
     padding-left: 86px;
-    margin-bottom:20px;
-    color:#333;
-    text-decoration:none;
-
+    margin-bottom: 20px;
+    color: #333;
+    text-decoration: none;
 }
 /*パスワード変更*/
-.password_update_form{
-    display:flex;
-    width:600px;
+.password_update_form {
+    display: flex;
+    width: 600px;
 }
 
 .password {
@@ -487,17 +464,19 @@ footer .container {
     border-radius: 10px;
     border: 1px solid #ccc;
 }
-.success_tite h6 {
+
+    .success_tite h6 {
         font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', HiraKakuPro-W3, Osaka, メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
         margin-top: 15px;
         margin-left: 25px;
         font-size: 20px;
-}
+    }
 
 .success p {
     font-size: 12.8px;
     margin-left: 90px;
 }
+
 .success .copyright {
     height: 30px;
     margin-top: 80px;
@@ -505,76 +484,208 @@ footer .container {
     border: 0.2px solid #cccc;
     padding-top: 2px;
 }
-.success_title_last{
-    padding-top:50px;
+
+.success_title_last {
+    padding-top: 50px;
 }
-.success_mes{
-    margin-top:40px;
+
+.success_mes {
+    margin-top: 40px;
 }
-.success_bor{
-    margin-top:70px;
+
+.success_bor {
+    margin-top: 70px;
 }
+
 .success a {
     font-size: 12px;
     width: 168px;
     height: 32px;
     border-radius: 10px;
     border: 1px solid #cccc;
-    margin-left:310px;
+    margin-left: 310px;
     margin-top: 37px;
     padding-left: 55px;
     padding-top: 6px;
 }
 
-.success a:hover{
+    .success a:hover {
         background: #333;
         color: #fff;
-}
+    }
 /*アカウント情報変更*/
-.account_update{
-    height:1000px;
+.account_update {
+    height: 1000px;
 }
-.account_update input {
-    width: 500px;
-}
+
+    .account_update input {
+        width: 500px;
+    }
+
 .update_form div {
     margin-top: 20px;
 }
-.update_form div label{
-    margin-bottom:10px;
-}
+
+    .update_form div label {
+        margin-bottom: 10px;
+    }
+
 .update_btn {
-    display:flex;
+    display: flex;
 }
-.update_btn .btn{
-    width:120px;
-}
-.update_btn .submit_btn{
-    border-radius:10px;
-    border:1px solid #ccc;
-    width:120px;
-    height:50px;
-}
+
+    .update_btn .btn {
+        width: 120px;
+    }
+
+    .update_btn .submit_btn {
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        width: 120px;
+        height: 50px;
+    }
+
 .update_btn2 {
     text-decoration: none;
     padding-top: 12px;
     padding-left: 20px;
     color: #333;
     margin-top: 30px;
-    margin-left:250px;
+    margin-left: 250px;
 }
-.update_btn1{
-    background-color:#fff;
-    margin-top:30px;
+
+.update_btn1 {
+    background-color: #fff;
+    margin-top: 30px;
 }
-.update_btn1:hover , .update_btn2:hover{
-    background-color:#333;
-    color:#fff;
-    cursor:pointer;
-}
+
+    .update_btn1:hover, .update_btn2:hover {
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+    }
+
 .back_top_btn {
     text-decoration: none;
     padding-top: 12px;
     padding-left: 20px;
     color: #333;
+}
+
+/*Book*/
+div .book {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background: #fcfcfc;
+}
+
+
+.book_search {
+    width: 500px;
+    height: 55px;
+    margin: 10px auto;
+    border-radius: 5px;
+    background: #db9cc7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    .book_search a {
+        margin-left: 330px;
+    }
+
+.book_list {
+    margin-top: 50px;
+    max-width: 800px;
+    font-size: 15px;
+    background: #fcfcfc;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book_tag {
+    width: 180px;
+    height: 250px;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.book_bor {
+    width: 120px;
+    height: 1px;
+    border: 0.5px solid #ccc;
+    margin-left: 30px;
+}
+
+.book_tag .book_img {
+    padding: 20px;
+}
+
+.book_tag img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.book_news {
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+    .book_news p {
+        margin-bottom: 5px;
+    }
+
+.search_form {
+    margin: auto;
+}
+
+.detail_btn {
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+    .detail_btn a {
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        width: 70px;
+        height: 25px;
+        padding-left: 23px;
+        padding-top: 3px;
+        text-decoration:none;
+        color:#333;
+    }
+.detail_btn_a:hover {
+    background: #333;
+    cursor: pointer;
+    color: #fff;
+}
+
+.book_tag:hover{
+    background:#f4f5cc;
+}
+
+.search_button {
+    border-radius: 10px;
+    background: #d663b1;
+    color: aliceblue;
+    border: none;
+    width: 50px;
+}
+
+.search_key {
+    border-radius: 10px;
+    border: none;
+    width: 300px;
 }

@@ -70,7 +70,12 @@ namespace KF31_WebApp.Controllers
 
             if (account.password != password.old_password)
             {
-                ModelState.AddModelError(string.Empty, "現在パスワードが正しくありません。");
+                ModelState.AddModelError("old_password", "現在パスワードが正しくありません。");
+                return View(password);
+            }
+            if ( password.old_password == password.new_Password)
+            {
+                ModelState.AddModelError("new_Password", "※新しいパスワードは現在のパスボートと同じ");
                 return View(password);
             }
             bool isUpdated = UpdatePassword(password.new_Password); 
@@ -94,13 +99,21 @@ namespace KF31_WebApp.Controllers
             var UserID = HttpContext.Session.GetString("UserId");
             var Password = HttpContext.Session.GetString("Password");
             var account = _context.Members.Where(x => x.userID == UserID && x.password == Password).FirstOrDefault();
-          
+
 
 
 
             //入力チェックあったら、ここに書く
-
-
+            if (!IsValidPhoneNumber(member.Tell))
+            {
+                ModelState.AddModelError("Tell", "電話番号が正しい形式ではありません。例: 123-456-7890");
+                return View(member);
+            }
+            if (!IsValidEmail(member.mail))
+            {
+                ModelState.AddModelError("mail", "メールアドレスは正しい形式ではありません。");
+                return View(member);
+            }
             account.DisplayName = member.DisplayName;
             account.mail = member.mail;
             account.Tell = member.Tell;
@@ -120,9 +133,17 @@ namespace KF31_WebApp.Controllers
             return true;
         }
 
+        private bool IsValidPhoneNumber(string phoneNumber)
+        {
+            var phoneRegex = @"^\d{3}-\d{4}-\d{4}$";
+            return System.Text.RegularExpressions.Regex.IsMatch(phoneNumber, phoneRegex);
+        }
 
-
-
+        private bool IsValidEmail(string email)
+        {
+            var emailRegex = @"^[^\s@]+@[^\s@]+\.[^\s@]+$";
+            return System.Text.RegularExpressions.Regex.IsMatch(email, emailRegex);
+        }
 
     }
 }

@@ -31,7 +31,7 @@ namespace KF31_WebApp.Controllers
 
             if (checkuser == null)
             {
-                ModelState.AddModelError("", "IDまたはパスボート間違います！");
+                ModelState.AddModelError("Password", "IDまたはパスボート間違います！");
                 return View(member);
             }
 
