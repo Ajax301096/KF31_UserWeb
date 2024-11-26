@@ -4,7 +4,7 @@
     ViewData["Title"] = "アカウント";
 }
 
-<div class="account">
+<div class="account account_update">
     <div class="account_title_1">
         <h5>会員情報詳細</h5>
         <p>
@@ -20,32 +20,38 @@
         <a>会員情報の変更</a>
     </div>
 
-    <div class="account_body">
+    <div class="account_body update_form">
+        <form asp-action="Account_update">
+
         <div>
             <label>会員ID</label>
             <p>@Model.userID</p>
         </div>
         <div>
             <label>氏名</label>
-            <p>@Model.DisplayName<p>
+                <input asp-for="DisplayName" class="form-control" value=@Model.DisplayName />
         </div>
         <div>
-            <label>生年月日</label>
+        <label>
+                    生年月日(※生年月日は一度登録いただくと変更できません)
+        </label>
             <p>@Model.Birthday.ToString("yyyy/MM/dd")</p>
         </div>
 
         <div>
             <label>メールアドレス</label>
-            <p>@Model.mail</p>
+                <input asp-for="mail" class="form-control" value=@Model.mail />
         </div>
         <div>
             <label>携帯番号</label>
-            <p>@Model.Tell</p>
+                <input asp-for="Tell" class="form-control" value=@Model.Tell />
         </div>
         <div>
             <label>住所</label>
-            <p>@Model.address</p>
+                <input asp-for="address" class="form-control" value=@Model.address />
         </div>
+            <input type="submit" value="変更する" class="btn btn-primary" />
+        </form>
         <div class="back_btn">
             <a>トップに戻る</a>
         </div>

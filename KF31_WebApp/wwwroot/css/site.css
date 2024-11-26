@@ -469,5 +469,68 @@ footer .container {
     margin-left: 50px;
     margin-bottom: -2px;
 }
+/*完了画面*/
+.success {
+    max-width: 800px;
+    height: 470px;
+    margin: auto;
+    background: #fcfcfc;
+    border: 1px solid #b3b1b2;
+    margin-bottom: -16px;
+}
 
+.success_tite {
+    max-width: 700px;
+    height: 50px;
+    margin: 10px auto;
+    background: #f6f6f6 url(/webopac_i_ja/image/default/com/bg_title01.png) left bottom repeat-x;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+.success_tite h6 {
+        font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', HiraKakuPro-W3, Osaka, メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+        margin-top: 15px;
+        margin-left: 25px;
+        font-size: 20px;
+}
+
+.success p {
+    font-size: 12.8px;
+    margin-left: 90px;
+}
+.success .copyright {
+    height: 30px;
+    margin-top: 80px;
+    background: #51ab3f;
+    border: 0.2px solid #cccc;
+    padding-top: 2px;
+}
+.success_title_last{
+    padding-top:50px;
+}
+.success_mes{
+    margin-top:40px;
+}
+.success_bor{
+    margin-top:70px;
+}
+.success a {
+    font-size: 12px;
+    width: 168px;
+    height: 32px;
+    border-radius: 10px;
+    border: 1px solid #cccc;
+    margin-left:310px;
+    margin-top: 37px;
+    padding-left: 55px;
+    padding-top: 6px;
+}
+
+.success a:hover{
+        background: #333;
+        color: #fff;
+}
 /*アカウント情報変更*/
+.account_update input{
+    width:500px;
+}

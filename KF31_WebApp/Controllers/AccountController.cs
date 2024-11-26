@@ -47,6 +47,11 @@ namespace KF31_WebApp.Controllers
 
             return View();
         }
+        public IActionResult Success()
+        {
+           
+            return View();
+        }
         [HttpPost]
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> PasswordUpdate(PassWordViewModel password)
@@ -78,6 +83,37 @@ namespace KF31_WebApp.Controllers
                 return View(password);
             }
        
+
+        }
+        public async Task<IActionResult> Account_update(PassWordViewModel password)
+        {
+            var UserID = HttpContext.Session.GetString("UserId");
+            var Password = HttpContext.Session.GetString("Password");
+            var account = _context.Members.Where(x => x.userID == UserID && x.password == Password).FirstOrDefault();
+            if (!ModelState.IsValid)
+            {
+                return View(password);
+            }
+
+
+
+            if (account.password != password.old_password)
+            {
+                ModelState.AddModelError(string.Empty, "現在パスワードが正しくありません。");
+                return View(password);
+            }
+            bool isUpdated = UpdatePassword(password.new_Password);
+            if (isUpdated)
+            {
+                ViewBag.Message = "パスワードが正常に変更されました。";
+                return RedirectToAction("Success", "Account");
+            }
+            else
+            {
+                ModelState.AddModelError(string.Empty, "パスワードの変更中にエラーが発生しました。");
+                return View(password);
+            }
+
 
         }
         private bool UpdatePassword(string newPassword)
