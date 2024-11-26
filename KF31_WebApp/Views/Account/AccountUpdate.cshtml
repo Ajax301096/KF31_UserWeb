@@ -17,11 +17,11 @@
         <h5>
             会員情報詳細
         </h5>
-        <a>トップへ戻る</a>
+        <a class="back_top_btn" asp-area="" asp-controller="Home" asp-action="Index">トップへ戻る</a>
     </div>
 
     <div class="account_body update_form">
-        <form asp-action="Account_update">
+        <form asp-action="AccountUpdate" method="post">
 
         <div>
             <label>会員ID</label>

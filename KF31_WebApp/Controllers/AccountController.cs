@@ -27,6 +27,8 @@ namespace KF31_WebApp.Controllers
 
             return View(account);
         }
+        [HttpGet]
+
         public IActionResult AccountUpdate(string id)
         {
             var UserID = HttpContext.Session.GetString("UserId");
@@ -85,34 +87,26 @@ namespace KF31_WebApp.Controllers
        
 
         }
-        public async Task<IActionResult> Account_update(PassWordViewModel password)
+        [HttpPost]
+        [AutoValidateAntiforgeryToken]
+        public async Task<IActionResult> AccountUpdate(Member member)
         {
             var UserID = HttpContext.Session.GetString("UserId");
             var Password = HttpContext.Session.GetString("Password");
             var account = _context.Members.Where(x => x.userID == UserID && x.password == Password).FirstOrDefault();
-            if (!ModelState.IsValid)
-            {
-                return View(password);
-            }
+          
 
 
 
-            if (account.password != password.old_password)
-            {
-                ModelState.AddModelError(string.Empty, "現在パスワードが正しくありません。");
-                return View(password);
-            }
-            bool isUpdated = UpdatePassword(password.new_Password);
-            if (isUpdated)
-            {
-                ViewBag.Message = "パスワードが正常に変更されました。";
-                return RedirectToAction("Success", "Account");
-            }
-            else
-            {
-                ModelState.AddModelError(string.Empty, "パスワードの変更中にエラーが発生しました。");
-                return View(password);
-            }
+            //入力チェックあったら、ここに書く
+
+
+            account.DisplayName = member.DisplayName;
+            account.mail = member.mail;
+            account.Tell = member.Tell;
+            account.address = member.address;
+            _context.SaveChanges();
+                return RedirectToAction("Success", "Account"); 
 
 
         }

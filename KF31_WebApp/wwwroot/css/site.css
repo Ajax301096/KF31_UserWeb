@@ -572,3 +572,9 @@ footer .container {
     color:#fff;
     cursor:pointer;
 }
+.back_top_btn {
+    text-decoration: none;
+    padding-top: 12px;
+    padding-left: 20px;
+    color: #333;
+}
