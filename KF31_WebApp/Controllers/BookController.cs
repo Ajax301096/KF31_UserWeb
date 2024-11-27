@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using System.Text.Json;
 using static System.Reflection.Metadata.BlobBuilder;
 using System.Drawing.Printing;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
 
 namespace KF31_WebApp.Controllers
 {
@@ -23,16 +25,19 @@ namespace KF31_WebApp.Controllers
         //    return View(items);
         //}
 
-        public IActionResult BookList(int page = 1, int pageSize = 20)
+        public IActionResult BookList(string keyword,int page = 1, int pageSize = 20)
         {
             var books = _context.Books.AsQueryable();
-
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                books = books.Where(b => b.Book_title.Contains(keyword) || b.Book_Author.Contains(keyword));
+            }
             // 本数
             var totalBooks = books.Count();
 
             // 現在のページ
             var booksToDisplay = books
-                .OrderBy(b => b.Book_title) 
+            .OrderBy(b => b.Book_title) 
                 .Skip((page - 1) * pageSize) // 前のページスキップ
                 .Take(pageSize) // 20冊取る
                 .ToList();
@@ -47,40 +52,42 @@ namespace KF31_WebApp.Controllers
 
             return View(model);
         }
-        public IActionResult Search(SearchBookViewModel search,int page = 1, int pageSize = 20)
-        {
-            var book = _context.Books.ToList();
-            if (!ModelState.IsValid)
-            {
-                return View(new SearchBookViewModel { Books = new List<Book>(), CurrentPage = page, TotalPages = 0 });
-            }
+        //絞り組む条件
 
-            if (!string.IsNullOrEmpty(search.keyword))
-            {
-                var books = _context.Books.Where(x => x.Book_title.Contains(search.keyword));
+        //public IActionResult Search(SearchBookViewModel search,int page = 1, int pageSize = 20)
+        //{
+        //    var book = _context.Books.ToList();
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View(new SearchBookViewModel { Books = new List<Book>(), CurrentPage = page, TotalPages = 0 });
+        //    }
 
-                // 本数
-                var totalBooks = books.Count();
+        //    if (!string.IsNullOrEmpty(search.keyword))
+        //    {
+        //        var books = _context.Books.Where(x => x.Book_title.Contains(search.keyword));
 
-                // 現在のページ
-                var booksToDisplay = books
-                    .OrderBy(b => b.Book_title)
-                    .Skip((page - 1) * pageSize) // 前のページスキップ
-                    .Take(pageSize) // 20冊取る
-                    .ToList();
+        //        // 本数
+        //        var totalBooks = books.Count();
 
-                //  ViewModel作成
-                var model = new SearchBookViewModel
-                {
-                    Books = booksToDisplay,
-                    CurrentPage = page,
-                    TotalPages = (int)Math.Ceiling(totalBooks / (double)pageSize)
-                };
+        //        // 現在のページ
+        //        var booksToDisplay = books
+        //            .OrderBy(b => b.Book_title)
+        //            .Skip((page - 1) * pageSize) // 前のページスキップ
+        //            .Take(pageSize) // 20冊取る
+        //            .ToList();
 
-                return View(model);
-            }
-            return View(new SearchBookViewModel { Books = new List<Book>(), CurrentPage = page, TotalPages = 0 });
-        }
+        //        //  ViewModel作成
+        //        var model = new SearchBookViewModel
+        //        {
+        //            Books = booksToDisplay,
+        //            CurrentPage = page,
+        //            TotalPages = (int)Math.Ceiling(totalBooks / (double)pageSize)
+        //        };
+
+        //        return View(model);
+        //    }
+        //    return View(new SearchBookViewModel { Books = new List<Book>(), CurrentPage = page, TotalPages = 0 });
+        //}
 
 
 

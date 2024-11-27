@@ -8,8 +8,8 @@
 <div class="book_search_background">
 <div class="book_search">
     <div class="search_form">
-                <form method="get" asp-action="Search">
-                    <input class="search_key" name="keyword" type="text" value="@ViewContext.HttpContext.Request.Query["keyword"]" placeholder="キーワードを入力してください！" />
+                <form method="get" asp-action="BookList">
+                    <input class="search_key" asp-for="keyword" type="text" value="@ViewContext.HttpContext.Request.Query["keyword"]" placeholder="キーワードを入力してください！" />
                     <input class="search_button" type="submit" value="検索" style="cursor:pointer;" />
                 </form>
     </div>

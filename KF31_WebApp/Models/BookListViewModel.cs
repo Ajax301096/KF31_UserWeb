@@ -11,5 +11,6 @@ namespace KF31_WebApp.Models
         public IEnumerable<Book> Books { get; set; } // Bookリスト
         public int CurrentPage { get; set; } // 現在のページ
         public int TotalPages { get; set; } // ページ数
+        public int keyword {  get; set; }
     }
 }
