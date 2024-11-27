@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using KF31_WebApp.Models;
 using Microsoft.AspNetCore.Http;
 using System.Text.Json;
+using static System.Reflection.Metadata.BlobBuilder;
+using System.Drawing.Printing;
 
 namespace KF31_WebApp.Controllers
 {
@@ -45,17 +47,39 @@ namespace KF31_WebApp.Controllers
 
             return View(model);
         }
-        public IActionResult Search(string keyword)
+        public IActionResult Search(SearchBookViewModel search,int page = 1, int pageSize = 20)
         {
             var book = _context.Books.ToList();
-
-            if (!string.IsNullOrEmpty(keyword))
+            if (!ModelState.IsValid)
             {
-              var   books = _context.Books.Where(x => x.Book_title.Contains(keyword)); 
-                return View(books.ToList());
+                return View(new SearchBookViewModel { Books = new List<Book>(), CurrentPage = page, TotalPages = 0 });
             }
-            return View(book);
 
+            if (!string.IsNullOrEmpty(search.keyword))
+            {
+                var books = _context.Books.Where(x => x.Book_title.Contains(search.keyword));
+
+                // 本数
+                var totalBooks = books.Count();
+
+                // 現在のページ
+                var booksToDisplay = books
+                    .OrderBy(b => b.Book_title)
+                    .Skip((page - 1) * pageSize) // 前のページスキップ
+                    .Take(pageSize) // 20冊取る
+                    .ToList();
+
+                //  ViewModel作成
+                var model = new SearchBookViewModel
+                {
+                    Books = booksToDisplay,
+                    CurrentPage = page,
+                    TotalPages = (int)Math.Ceiling(totalBooks / (double)pageSize)
+                };
+
+                return View(model);
+            }
+            return View(new SearchBookViewModel { Books = new List<Book>(), CurrentPage = page, TotalPages = 0 });
         }
 
 

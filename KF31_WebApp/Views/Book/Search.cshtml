@@ -1,21 +1,17 @@
-﻿@model IEnumerable<KF31_WebApp.Models.Book>
-
+﻿@model KF31_WebApp.Models.SearchBookViewModel
 @{
-    ViewData["Title"] = "本";
+    ViewData["Title"] = "本検索";
 }
 <div class="book">
 
     <div class="book_search">
         <table>
             <tbody>
-                <tr>
-                    <td>
-                        <h3 class="search_title">本を検索</h3>
-                    </td>
+                <tr>                   
                     <td>
                         <!-- Form 検索 -->
-                        <form method="get" action="@Url.Action("Search", "Book")">
-                            <input class="search_key" name="keyword" type="text" value="@ViewContext.HttpContext.Request.Query["keyword"]" placeholder="タイトル" />
+                        <form method="get" asp-action="Search">
+                            <input class="search_key" asp-for="keyword" type="text" value="@ViewContext.HttpContext.Request.Query["keyword"]" placeholder="タイトル" />
                             <input class="search_button" type="submit" value="検索" style="cursor:pointer;" />
                         </form>
                     </td>
@@ -23,55 +19,38 @@
             </tbody>
         </table>
     </div>
-    <div>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>
-                        @Html.DisplayNameFor(model => model.BookID)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Book_title)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.CategoryID)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Book_Author)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.PublisherID)
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.BookID)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Book_title)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.CategoryID)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Book_Author)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.PublisherID)
-                        </td>
+    <div class="book_list">
 
-                    </tr>
-                }
-            </tbody>
+        @foreach (var item in Model.Books)
+        {
+            <div class="book_tag">
+                <div class="book_img">
+                    <img src="~/picture/book_01_orange.png">
+                </div>
+                <div class="book_bor"></div>
+                <div class="book_news">
+                    <p>タイトル: @Html.DisplayFor(modelItem => item.Book_title)</p>
+                    <p>著者：@Html.DisplayFor(modelItem => item.Book_Author)</p>
+                </div>
+                <div class="detail_btn"><a class="detail_btn_a">詳細</a></div>
+            </div>
 
+        }
 
-
-
-        </table>
+    </div>
+    <div class="pagination">
+        @if (Model.CurrentPage > 1)
+        {
+            <a href="@Url.Action("BookList", new {keyword = Model.keyword, page = Model.CurrentPage - 1 })" class="prev">← 前のページ</a>
+        }
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            <a href="@Url.Action("BookList", new {keyword = Model.keyword, page = i })" class="@(i == Model.CurrentPage ? "active" : "")">@i</a>
+        }
+        @if (Model.CurrentPage < Model.TotalPages)
+        {
+            <a href="@Url.Action("BookList", new {keyword = Model.keyword, page = Model.CurrentPage + 1 })" class="next">次のページ →</a>
+        }
     </div>
 </div>
 
