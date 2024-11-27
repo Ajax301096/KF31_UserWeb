@@ -21,11 +21,29 @@ namespace KF31_WebApp.Controllers
         //    return View(items);
         //}
 
-        public IActionResult BookList(string id)
+        public IActionResult BookList(int page = 1, int pageSize = 20)
         {
-            var book = _context.Books.ToList();
+            var books = _context.Books.AsQueryable();
 
-            return View(book);
+            // 本数
+            var totalBooks = books.Count();
+
+            // 現在のページ
+            var booksToDisplay = books
+                .OrderBy(b => b.Book_title) 
+                .Skip((page - 1) * pageSize) // 前のページスキップ
+                .Take(pageSize) // 20冊取る
+                .ToList();
+
+            // Tạo ViewModel
+            var model = new BookListViewModel
+            {
+                Books = booksToDisplay,
+                CurrentPage = page,
+                TotalPages = (int)Math.Ceiling(totalBooks / (double)pageSize)
+            };
+
+            return View(model);
         }
         public IActionResult Search(string keyword)
         {
