@@ -6,13 +6,11 @@ namespace KF31_WebApp.Models
     {
         public KF31_LliM5_DataContext(DbContextOptions<KF31_LliM5_DataContext> options) : base(options){}
         public DbSet<Book> Books { get; set; }
-
         public DbSet<Member> Members { get; set; }
-        //public DbSet<Order> Orders { get; set; }
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<Order>()
-        //        .HasKey(od => new { od.No, od.Num });
-        //}
+        public DbSet<Stock> Stocks { get; set; }
+        public DbSet<Libraty> Libratys { get; set; }
+        public DbSet<Category> Categorys { get; set; }
+        public DbSet<Publisher> Publishers { get; set; }
+      
     }
 }

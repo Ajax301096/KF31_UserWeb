@@ -32,7 +32,7 @@
                     <p>タイトル: @Html.DisplayFor(modelItem => item.Book_title)</p>
                     <p>著者：@Html.DisplayFor(modelItem => item.Book_Author)</p>
          </div>
-         <div class="detail_btn"><a class="detail_btn_a">詳細</a></div>
+                <div class="detail_btn"><a href="@Url.Action("BookDetail", "Book", new { id = item.BookID })" class="detail_btn_a">詳細</a></div>
       </div>
          
    }

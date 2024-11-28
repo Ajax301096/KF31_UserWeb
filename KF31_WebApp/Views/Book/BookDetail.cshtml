@@ -1,0 +1,40 @@
+﻿@model KF31_WebApp.Models.BookDetailModel
+
+@{
+    ViewData["Title"] = "本詳細";
+}
+<div class="book_detail">
+    <div class="book_detail_title">
+        <h5>本詳細情報</h5>      
+    </div>
+    <div class="detail_body">
+        <div class="detail_body_book">
+            <div class="detail_book_img">
+                <img />
+            </div>
+            <div class="detail_bor"></div>
+            <div class="detail_news">
+                @if (Model.Book != null)
+                {
+                    <p>タイトル：@Model.Book.Book_title</p>
+                    <p>カテゴリ：@Model.Book.Category.CategoryName</p>
+                    <p>著者：@Model.Book.Book_Author</p>
+                    <p>出版社：@Model.Book.Publisher.PublisherName</p>
+                }
+                else
+                {
+                    <p>本情報存在していない</p>
+                }
+            </div>
+        </div>
+        <div class="detail_body_stock"></div>
+    </div>
+    <div class="detail_footer">
+         @foreach(var item in Model.Stock)
+         {
+            @* <p>@</p> *@
+         }
+        <a></a>
+        <a></a>
+    </div>
+</div>

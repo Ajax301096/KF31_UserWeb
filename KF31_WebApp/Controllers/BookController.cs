@@ -8,6 +8,7 @@ using static System.Reflection.Metadata.BlobBuilder;
 using System.Drawing.Printing;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
+using Microsoft.EntityFrameworkCore;
 
 namespace KF31_WebApp.Controllers
 {
@@ -52,6 +53,25 @@ namespace KF31_WebApp.Controllers
 
             return View(model);
         }
+        public IActionResult BookDetail( string id )
+        {
+            var book = _context.Books.Include(b => b.Category)
+                                     .Include(b => b.Publisher)
+                                     .Where(x=>x.BookID == id).FirstOrDefault();
+            if (book == null)
+            {
+                return NotFound("本存在してない");
+            }
+            var stock = _context.Stocks.Include(b=>b.Libraty).Where(x => x.BookID == id).ToList();
+            var stocks = new BookDetailModel()
+            {
+                Book = book,
+                Stock = stock
+            };
+            return View(stocks);
+        }
+
+
         //絞り組む条件
 
         //public IActionResult Search(SearchBookViewModel search,int page = 1, int pageSize = 20)
