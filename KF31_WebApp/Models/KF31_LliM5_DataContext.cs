@@ -11,6 +11,7 @@ namespace KF31_WebApp.Models
         public DbSet<Libraty> Libratys { get; set; }
         public DbSet<Category> Categorys { get; set; }
         public DbSet<Publisher> Publishers { get; set; }
+        public DbSet<Yoyaku> Yoyakus { get; set; }
       
     }
 }

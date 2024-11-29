@@ -4,6 +4,7 @@
     {
         public Book Book { get; set; }
         public List<Stock> Stock { get; set; }
+        public List<Libraty> Libraty { get; set; }
         public int Total {  get; set; }
     }
 }

@@ -73,6 +73,7 @@ namespace KF31_WebApp.Controllers
             foreach(var item in stock)
             {
                 model.Total += item.Quantity;
+                model.Libraty.Add(item.Libraty);
             }
             return View(model);
         }

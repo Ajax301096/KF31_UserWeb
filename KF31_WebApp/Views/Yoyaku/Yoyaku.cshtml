@@ -1,4 +1,4 @@
-﻿@model KF31_WebApp.Models.BookDetailModel
+﻿@model KF31_WebApp.Models.YoyakuView
 
 @{
     ViewData["Title"] = "予約";
@@ -9,35 +9,44 @@
     </div>
     <div class="detail_body">
         <div class="detail_body_book">
-            @if (Model.Book != null)
-            {
-                <div class="detail_book_img">
+            <div class="detail_book_img">
                     <img src="~/picture/B1.jpg" />
                 </div>
                 <div class="detail_bor"></div>
                 <div class="detail_news">
+                <form asp-action="AccountUpdate" method="post">
+                    <div>
+                        <label>会員ID</label>
+                        <p>@Model.userID</p>
+                    </div>
+                    <div>
+                        <label>本タイトル</label>
+                        <p>@Model.Book.Book_title</p>
+                    </div>
+                    <div>
+                        <label>図書館</label>
+                        @Html.DropDownListFor(model => model.Stock,
+                                 Model.Libraty,
+                                 "図書館を選択してください",
+                                 new { @class = "form-control", id = "libraries" })
+                    </div>
+                    <div>
+                        <label>本タイトル</label>
+                        <p>@Model.Book.Book_title</p>
+                    </div>
+                    <div>
+                        <label>本タイトル</label>
+                        <p>@Model.Book.Book_title</p>
+                    </div>
+                    </form>
+
 
                     <p>タイトル：@Model.Book.Book_title</p>
                     <p>カテゴリ：@Model.Book.Category.CategoryName</p>
                     <p>著者：@Model.Book.Book_Author</p>
                     <p>出版社：@Model.Book.Publisher.PublisherName</p>
                     <p class="stock_status">状態：</p>
-
-                    @if (Model.Total > 0)
-                    {
-                        <p class="stock_status1">在庫あり</p>
-                        <a class="detail_yoyaku">予約</a>
-                    }
-                    else
-                    {
-                        <p class="stock_status2">在庫なし </p>
-                    }
                 </div>
-            }
-            else
-            {
-                <p>本情報存在していない</p>
-            }
         </div>
         @if (Model.Total > 0)
         {
