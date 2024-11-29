@@ -8,10 +8,10 @@ namespace KF31_WebApp.Models
     {
         [Key]
         [Display(Name = "図書館ID")]
-        public string LibretyID { get; set; }
+        public string LibratyID { get; set; }
         [Display(Name = "図書館名")]
         public string LibretyName { get; set; }
         [Display(Name = "数量")]
-        public string Book_Quantity { get; set; }
+        public int Book_Quantity { get; set; }
     }
 }

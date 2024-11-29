@@ -1,29 +1,29 @@
 ﻿@model KF31_WebApp.Models.BookDetailModel
 
 @{
-    ViewData["Title"] = "本詳細";
+    ViewData["Title"] = "予約";
 }
 <div class="book_detail">
     <div class="book_detail_title">
-        <h6>本詳細情報</h6>      
+        <h6>本詳細情報</h6>
     </div>
     <div class="detail_body">
         <div class="detail_body_book">
-             @if (Model.Book != null)
-                {
-            <div class="detail_book_img">
-                <img src="~/picture/B1.jpg" />
-            </div>
-            <div class="detail_bor"></div>
-            <div class="detail_news">
-               
+            @if (Model.Book != null)
+            {
+                <div class="detail_book_img">
+                    <img src="~/picture/B1.jpg" />
+                </div>
+                <div class="detail_bor"></div>
+                <div class="detail_news">
+
                     <p>タイトル：@Model.Book.Book_title</p>
                     <p>カテゴリ：@Model.Book.Category.CategoryName</p>
                     <p>著者：@Model.Book.Book_Author</p>
                     <p>出版社：@Model.Book.Publisher.PublisherName</p>
                     <p class="stock_status">状態：</p>
 
-                    @if(Model.Total >0)
+                    @if (Model.Total > 0)
                     {
                         <p class="stock_status1">在庫あり</p>
                         <a class="detail_yoyaku">予約</a>
@@ -32,12 +32,12 @@
                     {
                         <p class="stock_status2">在庫なし </p>
                     }
-            </div>
-                }
-                else
-                {
-                    <p>本情報存在していない</p>
-                }
+                </div>
+            }
+            else
+            {
+                <p>本情報存在していない</p>
+            }
         </div>
         @if (Model.Total > 0)
         {
@@ -72,9 +72,9 @@
         else
         {
             <p class="stock_status2 stock_news">在庫なし </p>
-        } 
-       
-       
+        }
+
+
     </div>
     <div class="detail_footer">
 

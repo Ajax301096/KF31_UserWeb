@@ -72,7 +72,7 @@ namespace KF31_WebApp
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Book}/{action=BookList}/{id?}");
             });
         }
     }

@@ -9,6 +9,7 @@ using System.Drawing.Printing;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
 using Microsoft.EntityFrameworkCore;
+using System.Numerics;
 
 namespace KF31_WebApp.Controllers
 {
@@ -62,13 +63,18 @@ namespace KF31_WebApp.Controllers
             {
                 return NotFound("本存在してない");
             }
-            var stock = _context.Stocks.Include(b=>b.Libraty).Where(x => x.BookID == id).ToList();
-            var stocks = new BookDetailModel()
+            var stock = _context.Stocks.Include(b=>b.Libraty).Where(x => x.BookID == id);
+            var model = new BookDetailModel()
             {
-                Book = book,
-                Stock = stock
+                Book=book,
+                Stock=stock.ToList(),
+                Total =0
             };
-            return View(stocks);
+            foreach(var item in stock)
+            {
+                model.Total += item.Quantity;
+            }
+            return View(model);
         }
 
 

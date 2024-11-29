@@ -630,6 +630,7 @@ div .book {
 
 .book_tag .book_img {
     padding: 20px;
+    padding-left: 50px;
 }
 
 .book_tag img {
@@ -663,17 +664,18 @@ div .book {
         height: 25px;
         padding-left: 23px;
         padding-top: 3px;
-        text-decoration:none;
-        color:#333;
+        text-decoration: none;
+        color: #333;
     }
+
 .detail_btn_a:hover {
     background: #333;
     cursor: pointer;
     color: #fff;
 }
 
-.book_tag:hover{
-    background:#f4f5cc;
+.book_tag:hover {
+    background: #f4f5cc;
 }
 
 .pagination {
@@ -691,7 +693,7 @@ div .book {
         border-radius: 5px;
         transition: background-color 0.3s ease;
     }
-    /*選択されているときのカラー*/
+        /*選択されているときのカラー*/
         .pagination a.active {
             background-color: #605555;
             color: white;
@@ -700,7 +702,7 @@ div .book {
 
         .pagination a:hover {
             background-color: #b1a0a0;
-            color:#333;
+            color: #333;
         }
 
 .search_button {
@@ -716,3 +718,140 @@ div .book {
     border: none;
     width: 300px;
 }
+/*本詳細*/
+.book_detail {
+    width: 800px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 750px;
+    margin-bottom: -15px;
+}
+
+.book_detail_title {
+    margin-top: 10px;
+    margin-left: 25px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 40px;
+    text-align: left;
+    padding-left: 20px;
+    width: 750px;
+}
+
+    .book_detail_title h6 {
+        padding: 10px;
+    }
+
+.detail_body_book {
+    width: 750px;
+    margin-top: 20px;
+    margin-left: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 320px;
+    display: flex;
+    flex-direction: row;
+}
+
+.detail_book_img {
+    width: 250px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+    .detail_book_img img {
+        margin-top: 20px;
+        max-width: 200px;
+        max-height: 250px;
+        border-radius: 10px;
+    }
+
+.detail_bor {
+    width: 1px;
+    border: 0.5px solid #ccc;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 35px;
+}
+
+.detail_news {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 35px;
+    text-align: left;
+}
+
+.detail_yoyaku {
+    margin-left: 200px;
+    margin-top: 20px;
+    text-decoration: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    display: block;
+    color: #000;
+    font-size: 15px;
+    padding-top: 3px;
+    padding-left: 22px;
+    background-color: #6ea064;
+}
+
+    .detail_yoyaku:hover {
+        cursor: pointer;
+        background-color: #46ef24;
+        color: #fff;
+    }
+
+.stock_status1 {
+    color: #51ab3f;
+}
+
+.stock_status2 {
+    color: #fb0b0b;
+}
+
+.detail_body_stock {
+    width: 750px;
+    height: 210px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 25px;
+}
+
+    .detail_body_stock table {
+        width: 750px;
+    }
+.stock_news {
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+.detail_footer a {
+    margin-left: 360px;
+    margin-top: 20px;
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    display: block;
+    color: #000;
+    font-size: 15px;
+    padding-top: 7px;
+    padding-left: 4px;
+    background-color: #fff;
+}
+.detail_footer_btn:hover {
+    color: #fff;
+    background: #333;
+    cursor: pointer;
+}
+
+/*予約*/

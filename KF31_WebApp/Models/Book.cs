@@ -20,6 +20,8 @@ namespace KF31_WebApp.Models
         public string Book_Author { get; set; }
         [Display(Name = "出版社")]
         public string PublisherID { get; set; }
+        [Display(Name = "写真")]
+        public string? Book_Image { get; set; }
 
         [ForeignKey("CategoryID")]
         public virtual Category Category { get; set; }
