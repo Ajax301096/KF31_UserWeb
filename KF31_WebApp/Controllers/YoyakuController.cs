@@ -19,7 +19,7 @@ namespace KF31_WebApp.Controllers
             _context = context;
         }
 
-        public IActionResult Yoyaku(string id)
+        public IActionResult Yoyaku(string BookId)
         {
             var UserID = HttpContext.Session.GetString("UserId");
             
@@ -28,7 +28,7 @@ namespace KF31_WebApp.Controllers
 
             var book = books.Include(b => b.Category)
                                      .Include(b => b.Publisher)
-                                     .Where(x => x.BookID == id).FirstOrDefault();
+                                     .Where(x => x.BookID == BookId).FirstOrDefault();
 
 
             if (book == null)
@@ -38,7 +38,7 @@ namespace KF31_WebApp.Controllers
 
             var stock = _context.Stocks
                                 .Include(b => b.Libraty)
-                                .Where(x => x.BookID == id)
+                                .Where(x => x.BookID == BookId)
                                 .ToList();
 
             var libraries = _context.Libraties 
@@ -53,7 +53,6 @@ namespace KF31_WebApp.Controllers
                 Libraries = new SelectList(libraries, "LibratyID", "LibretyName"), 
                 SelectedLibraryId = 0 
             };
-            Console.WriteLine(model.Book.Category.CategoryName);
             return View(model);
 
            

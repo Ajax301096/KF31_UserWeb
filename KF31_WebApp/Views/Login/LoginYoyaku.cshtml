@@ -13,7 +13,7 @@
         図書館カードの番号（ハイフン不要）およびパスワードを入力してください
     </p>
     <div class="login_form">
-        <form asp-action="Login">
+        <form asp-action="LoginYoyakuPost">
             <div class="form-group">
                 <label asp-for="Id" class="control-label">図書館カードの番号</label>
                 <input asp-for="Id" class="form-control" />
@@ -26,7 +26,7 @@
             <span asp-validation-for="Password" class="text-danger"></span>
             <div class="border_div"></div>
             <div class="button_div">
-
+                <input type="hidden" name="BookId" value="@ViewData["BookId"]" />
                 <input type="submit" value="ログイン" class="btn btn-primary" />
                 <a href="javascript:history.back()" class="btn btn-primary">戻る</a>
 
