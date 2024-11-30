@@ -9,79 +9,79 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = KF31_WebApp
 build_property.RootNamespace = KF31_WebApp
-build_property.ProjectDir = C:\Users\hoany\OneDrive\Máy tính\各部の提出宿題\システム開発演習２\KF31_WebApp_Homever\KF31_WebApp\
+build_property.ProjectDir = C:\Users\hoany\OneDrive\Máy tính\各部の提出宿題\システム開発演習２\KF31_WebApp\KF31_WebApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\hoany\OneDrive\Máy tính\各部の提出宿題\システム開発演習２\KF31_WebApp_Homever\KF31_WebApp
+build_property.MSBuildProjectDirectory = C:\Users\hoany\OneDrive\Máy tính\各部の提出宿題\システム開発演習２\KF31_WebApp\KF31_WebApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp_Homever/KF31_WebApp/Views/Account/Account.cshtml]
+[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/Account/Account.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2NvdW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp_Homever/KF31_WebApp/Views/Account/AccountUpdate.cshtml]
+[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/Account/AccountUpdate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2NvdW50VXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp_Homever/KF31_WebApp/Views/Account/PasswordUpdate.cshtml]
+[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/Account/PasswordUpdate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQYXNzd29yZFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp_Homever/KF31_WebApp/Views/Account/Success.cshtml]
+[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/Account/Success.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTdWNjZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp_Homever/KF31_WebApp/Views/Book/BookDetail.cshtml]
+[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/Book/BookDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xCb29rRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp_Homever/KF31_WebApp/Views/Book/BookList.cshtml]
+[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/Book/BookList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xCb29rTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp_Homever/KF31_WebApp/Views/Book/Search.cshtml]
+[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/Book/Search.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xTZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp_Homever/KF31_WebApp/Views/Home/Index.cshtml]
+[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp_Homever/KF31_WebApp/Views/Home/Privacy.cshtml]
+[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp_Homever/KF31_WebApp/Views/Login/Login.cshtml]
+[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/Login/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp_Homever/KF31_WebApp/Views/Shared/Error.cshtml]
+[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp_Homever/KF31_WebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp_Homever/KF31_WebApp/Views/Yoyaku/Yoyaku.cshtml]
+[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/Yoyaku/Yoyaku.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWW95YWt1XFlveWFrdS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp_Homever/KF31_WebApp/Views/Yoyaku/YoyakuConfirm.cshtml]
+[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/Yoyaku/YoyakuConfirm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWW95YWt1XFlveWFrdUNvbmZpcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp_Homever/KF31_WebApp/Views/_ViewImports.cshtml]
+[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp_Homever/KF31_WebApp/Views/_ViewStart.cshtml]
+[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp_Homever/KF31_WebApp/Views/Shared/_Layout.cshtml]
+[C:/Users/hoany/OneDrive/Máy tính/各部の提出宿題/システム開発演習２/KF31_WebApp/KF31_WebApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9zcd593imd
