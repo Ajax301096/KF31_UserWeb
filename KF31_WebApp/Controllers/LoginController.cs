@@ -21,6 +21,11 @@ namespace KF31_WebApp.Controllers
 
             return View();
         }
+        public IActionResult LoginYoyaku(string id)
+        {
+
+            return View();
+        }
 
         [HttpPost]
         [AutoValidateAntiforgeryToken]
@@ -44,6 +49,30 @@ namespace KF31_WebApp.Controllers
             await HttpContext.SignInAsync("Cookie", principal);
 
             return RedirectToAction("Account", "Account");
+        }
+        [HttpPost]
+        [AutoValidateAntiforgeryToken]
+        public async Task<IActionResult> LoginYoyaku(LoginViewModel member,string id)
+        {
+            //ユーザのデータベース更新するときに、ここに更新して
+            var checkuser = _context.Members.Where(m => m.userID == member.Id && m.password == member.Password).FirstOrDefault();
+
+            if (checkuser == null)
+            {
+                ModelState.AddModelError("Password", "IDまたはパスボート間違います！");
+                return View(member);
+            }
+
+            HttpContext.Session.SetString("UserId", checkuser.userID);
+            HttpContext.Session.SetString("Password", checkuser.password);
+            HttpContext.Session.SetString("BookID", id);
+
+            var claims = new[] { new Claim(ClaimTypes.Name, checkuser.DisplayName) };
+            var identity = new ClaimsIdentity(claims, "Cookie");
+            var principal = new ClaimsPrincipal(identity);
+            await HttpContext.SignInAsync("Cookie", principal);
+
+            return RedirectToAction("Yoyaku", "Yoyaku");
         }
 
         public async Task<IActionResult> Logout()

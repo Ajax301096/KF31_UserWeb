@@ -855,3 +855,107 @@ div .book {
 }
 
 /*予約*/
+.yoyaku_detail {
+    width: 800px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 750px;
+    margin-bottom: -15px;
+}
+
+.yoyaku_detail_title {
+    margin-top: 10px;
+    margin-left: 25px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 40px;
+    text-align: left;
+    padding-left: 20px;
+    width: 750px;
+}
+
+    .yoyaku_detail_title h6 {
+        padding: 10px;
+    }
+
+.yoyaku_body_book {
+    width: 750px;
+    margin-top: 20px;
+    margin-left: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 320px;
+    display: flex;
+    flex-direction: row;
+}
+
+.yoyaku_book_img {
+    width: 250px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+    .yoyaku_book_img img {
+        margin-top: 20px;
+        max-width: 200px;
+        max-height: 250px;
+        border-radius: 10px;
+    }
+
+.yoyaku_bor {
+    width: 1px;
+    border: 0.5px solid #ccc;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 35px;
+}
+
+.yoyaku_news {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 35px;
+    text-align: left;
+}
+
+.userID{
+
+}
+.title{
+    margin-top:33px;
+}
+.libraty{
+    margin-top:-146px;
+    margin-left:166px;
+    width:195px;
+}
+.returntime {
+    margin-top: 20px;
+    margin-left: 166px;
+    width: 195px;
+}
+.yoyaku_btn {
+    margin-left: 260px;
+    margin-top: 50px;
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    display: block;
+    color: #000;
+    font-size: 15px;
+    padding-top: 7px;
+    padding-left: 30px;
+    background-color: #6ea064;
+}
+    .yoyaku_btn:hover {
+        cursor: pointer;
+        background-color: #46ef24;
+        color: #fff;
+    }

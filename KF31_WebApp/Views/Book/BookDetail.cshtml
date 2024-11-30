@@ -26,7 +26,15 @@
                     @if(Model.Total >0)
                     {
                         <p class="stock_status1">在庫あり</p>
-                        <a class="detail_yoyaku">予約</a>
+                        @if (Model.userID == null)
+                        {
+                            <a asp-action="LoginYoyaku" asp-controller="Login">予約</a>
+                        }
+                        else
+                        {
+                            Console.WriteLine(Model.userID);
+                            <a href="@Url.Action("Yoyaku", "Yoyaku", new { id = Model.Book.BookID })" class="detail_yoyaku">予約</a>
+                        }
                     }
                     else
                     {

@@ -56,9 +56,12 @@ namespace KF31_WebApp.Controllers
         }
         public IActionResult BookDetail( string id )
         {
+            var UserID = HttpContext.Session.GetString("UserId");
+
             var book = _context.Books.Include(b => b.Category)
                                      .Include(b => b.Publisher)
                                      .Where(x=>x.BookID == id).FirstOrDefault();
+
             if (book == null)
             {
                 return NotFound("本存在してない");
@@ -66,10 +69,12 @@ namespace KF31_WebApp.Controllers
             var stock = _context.Stocks.Include(b=>b.Libraty).Where(x => x.BookID == id);
             var model = new BookDetailModel()
             {
+                userID = UserID != null ? UserID : null,
                 Book=book,
                 Stock=stock.ToList(),
                 Total =0
             };
+
             foreach(var item in stock)
             {
                 model.Total += item.Quantity;

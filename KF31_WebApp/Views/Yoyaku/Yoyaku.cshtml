@@ -3,85 +3,51 @@
 @{
     ViewData["Title"] = "予約";
 }
-<div class="book_detail">
-    <div class="book_detail_title">
+<div class="yoyaku_detail">
+    <div class="yoyaku_detail_title">
         <h6>本詳細情報</h6>
     </div>
-    <div class="detail_body">
-        <div class="detail_body_book">
-            <div class="detail_book_img">
+    <div class="yoyaku_body">
+        <div class="yoyaku_body_book">
+            <div class="yoyaku_book_img">
                     <img src="~/picture/B1.jpg" />
                 </div>
-                <div class="detail_bor"></div>
-                <div class="detail_news">
+                <div class="yoyaku_bor"></div>
+                <div class="yoyaku_news">
                 <form asp-action="AccountUpdate" method="post">
-                    <div>
+                    <div class="userID">
                         <label>会員ID</label>
-                        <p>@Model.userID</p>
+                        <p>@Model.Member.userID</p>
                     </div>
-                    <div>
+                    <div class="title">
                         <label>本タイトル</label>
                         <p>@Model.Book.Book_title</p>
                     </div>
-                    <div>
+                    <div class="libraty">
                         <label>図書館</label>
-                        @Html.DropDownListFor(model => model.Stock,
-                                 Model.Libraty,
+                        @Html.DropDownListFor(model => model.SelectedLibraryId,
+                                 Model.Libraries,
                                  "図書館を選択してください",
                                  new { @class = "form-control", id = "libraries" })
                     </div>
-                    <div>
-                        <label>本タイトル</label>
-                        <p>@Model.Book.Book_title</p>
+                    <div class="returntime">
+                        <label>返却日</label>
+                        <input type="date" name="reservationDate" class="form-control" required />
                     </div>
                     <div>
-                        <label>本タイトル</label>
-                        <p>@Model.Book.Book_title</p>
-                    </div>
+                        @if(Model.userID == null)
+                        {
+                            <a class="yoyaku_btn" asp-action="LoginYoyaku" asp-controller="Login">予約</a>
+                        }
+                        else
+                        {
+                            <a class="yoyaku_btn"  asp-action="Yoyaku" asp-controller="Yoyaku">予約</a>
+                        }
+                        </div>
                     </form>
-
-
-                    <p>タイトル：@Model.Book.Book_title</p>
-                    <p>カテゴリ：@Model.Book.Category.CategoryName</p>
-                    <p>著者：@Model.Book.Book_Author</p>
-                    <p>出版社：@Model.Book.Publisher.PublisherName</p>
-                    <p class="stock_status">状態：</p>
                 </div>
         </div>
-        @if (Model.Total > 0)
-        {
-            <div class="detail_body_stock">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>
-                                図書館名
-                            </th>
-                            <th>
-                                数量
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model.Stock)
-                        {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Libraty.LibretyName)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Quantity)
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-        }
-        else
-        {
-            <p class="stock_status2 stock_news">在庫なし </p>
-        }
+       
 
 
     </div>

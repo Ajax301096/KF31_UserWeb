@@ -1,0 +1,62 @@
+﻿@model KF31_WebApp.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<div class="login">
+    <div class="login_tite">
+        <h6>ログイン</h6>
+    </div>
+    <p>
+        図書館カードの番号（ハイフン不要）およびパスワードを入力してください
+    </p>
+    <div class="login_form">
+        <form asp-action="Login">
+            <div class="form-group">
+                <label asp-for="Id" class="control-label">図書館カードの番号</label>
+                <input asp-for="Id" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label">パスワード</label>
+                <input asp-for="Password" class="form-control" type="password" />
+
+            </div>
+            <span asp-validation-for="Password" class="text-danger"></span>
+            <div class="border_div"></div>
+            <div class="button_div">
+
+                <input type="submit" value="ログイン" class="btn btn-primary" />
+                <a href="javascript:history.back()" class="btn btn-primary">戻る</a>
+
+            </div>
+        </form>
+    </div>
+    <p>画面右上のログインボタンからログインするとトップ画面に戻ります。</p>
+    <p>
+        直前に見ていた検索結果は「表示履歴」をご参照ください（ブラウザを閉じると失われます）
+    </p>
+    <p>
+        セキュリティ確保のため利用状況確認や資料の予約、予約カートの参照を最後に行ってから
+    </p>
+    <p>
+        30分経過すると、自動的にセッションが切れます。あらかじめご了承ください。
+    </p>
+
+    <div class="border_div"></div>
+    <p class="login_title_last">KF31_図書館</p>
+    <div class="copyright">
+        <p>
+            Copyright c 2024- OSAKA KF31_LliM5
+        </p>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
