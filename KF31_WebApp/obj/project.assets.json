@@ -3406,11 +3406,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\KF31_WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp_Homever\\KF31_WebApp\\KF31_WebApp.csproj",
       "projectName": "KF31_WebApp",
-      "projectPath": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\KF31_WebApp.csproj",
+      "projectPath": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp_Homever\\KF31_WebApp\\KF31_WebApp.csproj",
       "packagesPath": "C:\\Users\\hoany\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\obj\\",
+      "outputPath": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp_Homever\\KF31_WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z0eTAKganzg=",
+  "dgSpecHash": "lnjMjGrYc08=",
   "success": true,
-  "projectFilePath": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\KF31_WebApp.csproj",
+  "projectFilePath": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp_Homever\\KF31_WebApp\\KF31_WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hoany\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\hoany\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
