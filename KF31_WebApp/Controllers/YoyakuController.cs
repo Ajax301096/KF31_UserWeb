@@ -3,20 +3,21 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using KF31_WebApp.Models;
 using Microsoft.AspNetCore.Http;
-using System.Text.Json;
-using Microsoft.AspNetCore.Authentication;
-using System.Security.Claims;
+using Newtonsoft.Json;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Collections;
-using Newtonsoft.Json;
-using System.Net;
+using System.IO;
+using ZXing;
+using ZXing.Common;
+using ZXing.QrCode;
+using System.Drawing;
+using EntityWorker.Core.Helper;
 
 namespace KF31_WebApp.Controllers
 {
-    public class YoyakuController:Controller
+    public class YoyakuController : Controller
     {
-        
+
         private readonly KF31_LliM5_DataContext _context;
         public YoyakuController(KF31_LliM5_DataContext context)
         {
@@ -27,8 +28,8 @@ namespace KF31_WebApp.Controllers
         public IActionResult Yoyaku(string BookId)
         {
             var UserID = HttpContext.Session.GetString("UserId");
-            
-            var member = _context.Members.Where(x=>x.userID == UserID).FirstOrDefault();    
+
+            var member = _context.Members.Where(x => x.userID == UserID).FirstOrDefault();
             var books = _context.Books.AsQueryable();
 
             var book = books.Include(b => b.Category)
@@ -44,7 +45,7 @@ namespace KF31_WebApp.Controllers
                                 .Include(b => b.Libraty)
                                 .Where(x => x.BookID == BookId);
             var libraries = new List<Libraty>();
-           foreach(var item in stock)
+            foreach (var item in stock)
             {
                 libraries.Add(item.Libraty);
             }
@@ -54,11 +55,12 @@ namespace KF31_WebApp.Controllers
                 Book = book,
                 BookID = BookId,
                 Stock = stock.ToList(),
-                Libraries = new SelectList(libraries, "LibratyID", "LibretyName")            };
+                Libraries = new SelectList(libraries, "LibratyID", "LibretyName")
+            };
 
             return View(model);
 
-           
+
         }
         [HttpPost]
         [AutoValidateAntiforgeryToken]
@@ -106,43 +108,71 @@ namespace KF31_WebApp.Controllers
                 Console.WriteLine(model.Book.BookID);
                 Console.WriteLine(model.LibratyID);
                 Console.WriteLine(model.Stock.Count());
-                return View(model);  
+                return View(model);
             }
+
            
-            //var UserID = HttpContext.Session.GetString("UserId");
-
-            //var member = _context.Members.Where(x => x.userID == UserID).FirstOrDefault();
-            //var books = _context.Books.AsQueryable();
-
-            //var book = books.Include(b => b.Category)
-            //                         .Include(b => b.Publisher)
-            //                         .Where(x => x.BookID == BookId).FirstOrDefault();
-
-
-            //if (book == null)
-            //{
-            //    return NotFound("本存在してない");
-            //}
-
-            //var stock = _context.Stocks
-            //                    .Include(b => b.Libraty)
-            //                    .Where(x => x.BookID == BookId)
-            //                    .ToList();
-
-            //var libraries = _context.Libraties
-            //                         .Select(l => new { l.LibratyID, l.LibretyName })
-            //                         .ToList();
-            //var model = new YoyakuView
-            //{
-            //    userID = UserID,
-            //    Member = member,
-            //    Book = book,
-            //    Stock = stock,
-            //    Libraries = new SelectList(libraries, "LibratyID", "LibretyName")
-            //};
             return View(model);
 
 
         }
+        public void YoyakuAdd(YoyakuView model)
+        {
+            var Yoyakulist = _context.Yoyakus.AsQueryable();
+            Yoyakulist = Yoyakulist.Include(x => x.Member).Include(x => x.Stock);
+            var YoyakuCount = Yoyakulist.Count();
+            var stock_item = _context.Stocks.Where(x => x.BookID == model.BookID && x.LibratyID == model.LibratyID).FirstOrDefault();
+            var YoyakuID = "";
+            YoyakuID = model.userID + stock_item.StockID + (YoyakuID + 1).ToString();
+            var YoyakuBarCode = GenerateBarcode(YoyakuID);
+            var yoyaku_model = new Yoyaku()
+            {
+                YoyakuID = YoyakuID,
+                Quantity = 1,
+                userID = model.userID,
+                StockID = stock_item.StockID,
+                ReturnTime = model.Return_time,
+                statusID = "YYK01",
+                Yoyaku_Barcode = YoyakuBarCode
+            };
+            _context.Yoyakus.Add(yoyaku_model);
+            _context.SaveChanges();
+
+        }
+        private string GenerateBarcode(string data)
+        {
+            var writer = new BarcodeWriterPixelData
+            {
+                Format = BarcodeFormat.CODE_128,
+                Options = new EncodingOptions
+                {
+                    Height = 100,
+                    Width = 300,
+                    Margin = 1
+                }
+            };
+
+            var pixelData = writer.Write(data);
+
+            using (var bitmap = new System.Drawing.Bitmap(pixelData.Width, pixelData.Height))
+            {
+                for (int y = 0; y < pixelData.Height; y++)
+                {
+                    for (int x = 0; x < pixelData.Width; x++)
+                    {
+                        var color = pixelData.Pixels[(y * pixelData.Width + x) * 4]; // Chỉ số RGBA
+                        var grayScale = System.Drawing.Color.FromArgb(color, color, color);
+                        bitmap.SetPixel(x, y, grayScale);
+                    }
+                }
+
+                using (var ms = new MemoryStream())
+                {
+                    bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                    return Convert.ToBase64String(ms.ToArray());
+                }
+            }
+        }
+
     }
 }

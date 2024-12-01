@@ -19,12 +19,14 @@ namespace KF31_WebApp.Models
         [Display(Name = "在庫ID")]
         public string StockID { get; set; }
         [Display(Name = "返却日")]
-        public string ReturnTime { get; set; }
+        public DateTime ReturnTime { get; set; }
         [Display(Name = "状態")]
-        public string status { get; set; }
+        public string statusID { get; set; }
         [Display(Name = "バーコード")]
         public string? Yoyaku_Barcode { get; set; }
-        
+        [ForeignKey("statusID")]
+        public virtual Status_table Status { get; set; }
+
         [ForeignKey("userID")]
         public virtual Member Member { get; set; }
         [ForeignKey("StockID")]
