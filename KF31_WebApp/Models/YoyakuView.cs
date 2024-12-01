@@ -7,10 +7,9 @@ namespace KF31_WebApp.Models
 {
     public class YoyakuView:BookDetailModel
     {
-        public string userID {  get; set; }
-        [ForeignKey("userID")]
-        public virtual Member Member { get; set; }
-        public int SelectedLibraryId { get; set; } 
+       
+        public string? LibratyID { get; set; } 
         public SelectList Libraries { get; set; }
+        public DateTime Return_time { get; set; }
     }
 }

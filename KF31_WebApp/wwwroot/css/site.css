@@ -927,15 +927,16 @@ div .book {
 
 }
 .title{
-    margin-top:33px;
+    margin-top:65px;
 }
 .libraty{
-    margin-top:-146px;
+    margin-top:-178px;
     margin-left:166px;
     width:195px;
+    height:64px;
 }
 .returntime {
-    margin-top: 20px;
+    margin-top: 50px;
     margin-left: 166px;
     width: 195px;
 }
@@ -950,11 +951,40 @@ div .book {
     display: block;
     color: #000;
     font-size: 15px;
-    padding-top: 7px;
-    padding-left: 30px;
+    padding-top: 0px;
+    padding-left: 5px;
     background-color: #6ea064;
 }
     .yoyaku_btn:hover {
+        cursor: pointer;
+        background-color: #46ef24;
+        color: #fff;
+    }
+
+.confirm_btn, .update_yoyaku {
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    display: block;
+    color: #000;
+    font-size: 15px;
+    padding-top: 6px;
+    padding-left: 34px;
+    background-color: #6ea064;
+}
+.confirm_btn {
+    margin-left: 270px;
+    margin-top: -40px;
+    
+}
+.update_yoyaku {
+    margin-left: 150px;
+    margin-top: 50px;
+   
+}
+    .update_yoyaku:hover, .confirm_btn:hover {
         cursor: pointer;
         background-color: #46ef24;
         color: #fff;

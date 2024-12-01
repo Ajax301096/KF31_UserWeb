@@ -96,3 +96,4 @@ C:\Users\hoany\OneDrive\Máy tính\各部の提出宿題\システム開発演�
 C:\Users\hoany\OneDrive\Máy tính\各部の提出宿題\システム開発演習２\KF31_WebApp\KF31_WebApp\obj\Debug\net8.0\KF31_WebApp.pdb
 C:\Users\hoany\OneDrive\Máy tính\各部の提出宿題\システム開発演習２\KF31_WebApp\KF31_WebApp\obj\Debug\net8.0\KF31_WebApp.genruntimeconfig.cache
 C:\Users\hoany\OneDrive\Máy tính\各部の提出宿題\システム開発演習２\KF31_WebApp\KF31_WebApp\obj\Debug\net8.0\ref\KF31_WebApp.dll
+C:\Users\hoany\OneDrive\Máy tính\各部の提出宿題\システム開発演習２\KF31_WebApp\KF31_WebApp\bin\Debug\net8.0\Newtonsoft.Json.dll

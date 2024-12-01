@@ -13,7 +13,7 @@ namespace KF31_WebApp.Models
         public string YoyakuID { get; set; }
 
         [Display(Name = "数量")]
-        public int? Quantity { get; set; }
+        public int Quantity { get; set; }
         [Display(Name = "ユーザID")]
         public string userID { get; set; }
         [Display(Name = "在庫ID")]

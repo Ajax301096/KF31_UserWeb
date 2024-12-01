@@ -21,11 +21,7 @@ namespace KF31_WebApp.Controllers
             _context = context;
         }
 
-        //public IActionResult ItemList()
-        //{
-        //    var items = _context.Items.Select(i => i);
-        //    return View(items);
-        //}
+      
 
         public IActionResult BookList(string keyword,int page = 1, int pageSize = 20)
         {
