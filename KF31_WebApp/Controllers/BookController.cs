@@ -119,34 +119,7 @@ namespace KF31_WebApp.Controllers
 
 
 
-        private string GenerateBarcode(string data)
-        {
-            var writer = new BarcodeWriter
-            {
-                Format = BarcodeFormat.CODE_128,  // Định dạng CODE_128 phổ biến cho barcode
-                Options = new EncodingOptions { Height = 100, Width = 300, Margin = 1 }
-            };
-
-            using (var bitmap = writer.Write(data))
-            using (var stream = new MemoryStream())
-            {
-                bitmap.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
-                return Convert.ToBase64String(stream.ToArray()); // Trả về chuỗi Base64
-            }
-        }
-        public BitmapImage GenerateBarcodeImage(string barcodeBase64)
-        {
-            var bitmap = new BitmapImage();
-            byte[] binaryData = Convert.FromBase64String(barcodeBase64);
-            using (var stream = new MemoryStream(binaryData))
-            {
-                bitmap.BeginInit();
-                bitmap.CacheOption = BitmapCacheOption.OnLoad;
-                bitmap.StreamSource = stream;
-                bitmap.EndInit();
-            }
-            return bitmap;
-        }
+      
     }
 }
 

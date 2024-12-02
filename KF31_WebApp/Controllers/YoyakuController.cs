@@ -70,12 +70,10 @@ namespace KF31_WebApp.Controllers
             model.Book = _context.Books.Include(b => b.Category)
                                      .Include(b => b.Publisher)
                                      .Where(x => x.BookID == model.BookID).FirstOrDefault();
-            Console.WriteLine(model.Book.BookID);
             model.Stock = _context.Stocks
                                 .Include(b => b.Libraty)
                                 .Where(x => x.BookID == model.Book.BookID)
             .ToList();
-            Console.WriteLine(model.BookID);
             var libraries = new List<Libraty>();
             foreach (var item in model.Stock)
             {
@@ -96,9 +94,25 @@ namespace KF31_WebApp.Controllers
 
 
         }
-        public IActionResult YoyakuAdd(YoyakuView model)
+       
+        public IActionResult YoyakuConfirm(YoyakuView model)
         {
             var yoyakuViewJson = TempData["YoyakuView"] as string;
+            if (yoyakuViewJson != null)
+            {
+                model = JsonConvert.DeserializeObject<YoyakuView>(yoyakuViewJson);
+            TempData["YoyakuViewConfirm"] = JsonConvert.SerializeObject(model);
+                return View(model);
+            }
+
+
+            return View(model);
+
+
+        }
+        public IActionResult YoyakuAdd(YoyakuView model)
+        {
+            var yoyakuViewJson = TempData["YoyakuViewConfirm"] as string;
 
             if (yoyakuViewJson != null)
             {
@@ -115,20 +129,6 @@ namespace KF31_WebApp.Controllers
             {
                 return View();
             }
-        }
-        public IActionResult YoyakuConfirm(YoyakuView model)
-        {
-            var yoyakuViewJson = TempData["YoyakuView"] as string;
-            if (yoyakuViewJson != null)
-            {
-                model = JsonConvert.DeserializeObject<YoyakuView>(yoyakuViewJson);
-                return View(model);
-            }
-
-           
-            return View(model);
-
-
         }
         public void Add_Item(YoyakuView model)
         {
