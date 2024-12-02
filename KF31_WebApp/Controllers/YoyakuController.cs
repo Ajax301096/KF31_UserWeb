@@ -96,10 +96,10 @@ namespace KF31_WebApp.Controllers
 
 
         }
-
-        public IActionResult YoyakuConfirm(YoyakuView model)
+        public IActionResult YoyakuAdd(YoyakuView model)
         {
             var yoyakuViewJson = TempData["YoyakuView"] as string;
+
             if (yoyakuViewJson != null)
             {
                 model = JsonConvert.DeserializeObject<YoyakuView>(yoyakuViewJson);
@@ -108,6 +108,20 @@ namespace KF31_WebApp.Controllers
                 Console.WriteLine(model.Book.BookID);
                 Console.WriteLine(model.LibratyID);
                 Console.WriteLine(model.Stock.Count());
+                Add_Item(model);
+                return View();
+            }
+            else
+            {
+                return View();
+            }
+        }
+        public IActionResult YoyakuConfirm(YoyakuView model)
+        {
+            var yoyakuViewJson = TempData["YoyakuView"] as string;
+            if (yoyakuViewJson != null)
+            {
+                model = JsonConvert.DeserializeObject<YoyakuView>(yoyakuViewJson);
                 return View(model);
             }
 
@@ -116,7 +130,7 @@ namespace KF31_WebApp.Controllers
 
 
         }
-        public void YoyakuAdd(YoyakuView model)
+        public void Add_Item(YoyakuView model)
         {
             var Yoyakulist = _context.Yoyakus.AsQueryable();
             Yoyakulist = Yoyakulist.Include(x => x.Member).Include(x => x.Stock);
