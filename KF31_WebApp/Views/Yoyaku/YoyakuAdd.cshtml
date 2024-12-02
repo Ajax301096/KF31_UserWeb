@@ -3,17 +3,21 @@
 @{
     ViewData["Title"] = "予約";
 }
-<div class="yoyaku_detail">
-    <div class="yoyaku_detail_title">
+<div class="yoyaku_add">
+    <div class="yoyaku_add_title">
         <h6>本詳細情報</h6>
     </div>
-    <div class="yoyaku_body">
+    <div class="yoyaku_add_body">
         <div class="yoyaku_body_barcode">
-            <div class="yoyaku_bor"></div>
-          
+            <p>予約バーコード</p>
+            @if (ViewContext.HttpContext.Session.GetString("BarcodeImage") != null)
+            {
+                <img src="@ViewContext.HttpContext.Session.GetString("BarcodeImage")" alt="予約バーコード" />
+            }
         </div>
-        <div>
+        <div class="yoyaku_body_news">
             <p>予約完了しました！</p>
+            <p>図書館での予約受け取りの際には、予約バーコードをスタッフに伝えてください。</p>
         </div>
 
 

@@ -989,3 +989,66 @@ div .book {
         background-color: #46ef24;
         color: #fff;
     }
+/*予約完了*/
+.yoyaku_add {
+    width: 800px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 750px;
+    margin-bottom: -15px;
+}
+
+.yoyaku_add_title {
+    margin-top: 10px;
+    margin-left: 25px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 40px;
+    text-align: left;
+    padding-left: 20px;
+    width: 750px;
+}
+
+    .yoyaku_add_title h6 {
+        padding: 10px;
+    }
+.yoyaku_add_body{
+    max-width:800px;
+    display:flex;
+    flex-direction:row;
+
+
+}
+.yoyaku_body_barcode{
+    width:400px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    height:400px;
+    margin-left:25px;
+    margin-top:50px;
+}
+.yoyaku_body_barcode p{
+    margin-top:20px;
+    font-size:25px;
+}
+.yoyaku_body_barcode img{
+
+}
+.yoyaku_body_news {
+    width: 320px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 400px;
+    margin-left: 25px;
+    margin-top: 50px;
+    padding-top:80px;
+    text-align:left;
+    padding-left:20px;
+    padding-right:20px;
+}
+.yoyaku_body_news p{
+
+}
