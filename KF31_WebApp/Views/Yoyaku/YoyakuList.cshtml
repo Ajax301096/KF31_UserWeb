@@ -1,0 +1,68 @@
+﻿@model KF31_WebApp.Models.YoyakuListViewModel
+
+@{
+    ViewData["Title"] = "予約一覧";
+}
+<div class="yoyaku_list">
+    <div class="yoyaku_list_title">
+        <h6>貸出履歴</h6>
+    </div>
+    <div class="yoyaku_list_body">
+        <div class="body_list">
+             @if(Model == null || !Model.Yoyaku.Any())
+            {
+                <p>予約情報が存在しません。</p>
+            }
+            else
+                    {
+           <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                            </th>
+                            <th class="title">
+　　　　　　　　　　　　　　　　タイトル
+　　　　　　　　　　　　　　</th>
+                            <th>
+                               最新の状態
+                            </th>                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                   
+                        
+                    @foreach (var item in Model.Yoyaku)
+                        {
+                            <tr>
+                                <td>
+                                    <img class="yoyaku_img" src="~/picture/@(item.Stock.Book.Book_Image + ".jpeg")" />
+                                </td>
+                                <td>
+                                  <a asp-action="" asp-controller="" >@item.Stock.Book.Book_title</a>
+                                </td>
+                                <td>
+                                  @item.Status.status
+                                </td>                               
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                    }          
+        </div>
+    </div>
+    <div class="pagination">
+        @if (Model.CurrentPage > 1)
+        {
+            <a href="@Url.Action("BookList", new { page = Model.CurrentPage - 1 })" class="prev">← 前のページ</a>
+        }
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            <a href="@Url.Action("BookList", new { page = i })" class="@(i == Model.CurrentPage ? "active" : "")">@i</a>
+        }
+        @if (Model.CurrentPage < Model.TotalPages)
+        {
+            <a href="@Url.Action("BookList", new { page = Model.CurrentPage + 1 })" class="next">次のページ →</a>
+        }
+    </div>
+    
+</div>

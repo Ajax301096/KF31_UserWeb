@@ -245,16 +245,48 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\B1.jpg",
-      "PackagePath": "staticwebassets\\picture\\B1.jpg"
+      "Id": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\B1.jpeg",
+      "PackagePath": "staticwebassets\\picture\\B1.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\B10.jpeg",
+      "PackagePath": "staticwebassets\\picture\\B10.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\B2.jpeg",
+      "PackagePath": "staticwebassets\\picture\\B2.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\B3.jpeg",
+      "PackagePath": "staticwebassets\\picture\\B3.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\B4.jpeg",
+      "PackagePath": "staticwebassets\\picture\\B4.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\B5.jpeg",
+      "PackagePath": "staticwebassets\\picture\\B5.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\B6.jpeg",
+      "PackagePath": "staticwebassets\\picture\\B6.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\B7.jpeg",
+      "PackagePath": "staticwebassets\\picture\\B7.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\B8.jpeg",
+      "PackagePath": "staticwebassets\\picture\\B8.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\B9.jpeg",
+      "PackagePath": "staticwebassets\\picture\\B9.jpeg"
     },
     {
       "Id": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\Header_Background.png",
       "PackagePath": "staticwebassets\\picture\\Header_Background.png"
-    },
-    {
-      "Id": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\book_01_orange.png",
-      "PackagePath": "staticwebassets\\picture\\book_01_orange.png"
     },
     {
       "Id": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\header_Backgroun.jpg",

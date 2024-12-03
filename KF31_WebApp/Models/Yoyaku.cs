@@ -24,6 +24,7 @@ namespace KF31_WebApp.Models
         public string statusID { get; set; }
         [Display(Name = "バーコード")]
         public string? Yoyaku_Barcode { get; set; }
+        public DateTime start_time { get; set; }
         [ForeignKey("statusID")]
         public virtual Status_table Status { get; set; }
 

@@ -62,7 +62,7 @@ namespace KF31_WebApp.Controllers
             {
                 return NotFound("本存在してない");
             }
-            var stock = _context.Stocks.Include(b=>b.Libraty).Where(x => x.BookID == id);
+            var stock = _context.Stocks.Include(b=>b.Libraty).Where(x => x.BookID == id && x.Quantity >0);
             var model = new BookDetailModel()
             {
                 userID = UserID != null ? UserID : null,

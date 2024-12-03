@@ -829,10 +829,12 @@ div .book {
     .detail_body_stock table {
         width: 750px;
     }
+
 .stock_news {
     margin-top: 100px;
     margin-bottom: 80px;
 }
+
 .detail_footer a {
     margin-left: 360px;
     margin-top: 20px;
@@ -848,6 +850,7 @@ div .book {
     padding-left: 4px;
     background-color: #fff;
 }
+
 .detail_footer_btn:hover {
     color: #fff;
     background: #333;
@@ -923,23 +926,26 @@ div .book {
     text-align: left;
 }
 
-.userID{
+.userID {
+}
 
+.title {
+    margin-top: 65px;
 }
-.title{
-    margin-top:65px;
+
+.libraty {
+    margin-top: -178px;
+    margin-left: 166px;
+    width: 195px;
+    height: 64px;
 }
-.libraty{
-    margin-top:-178px;
-    margin-left:166px;
-    width:195px;
-    height:64px;
-}
+
 .returntime {
     margin-top: 50px;
     margin-left: 166px;
     width: 195px;
 }
+
 .yoyaku_btn {
     margin-left: 260px;
     margin-top: 50px;
@@ -955,6 +961,7 @@ div .book {
     padding-left: 5px;
     background-color: #6ea064;
 }
+
     .yoyaku_btn:hover {
         cursor: pointer;
         background-color: #46ef24;
@@ -974,16 +981,17 @@ div .book {
     padding-left: 34px;
     background-color: #6ea064;
 }
+
 .confirm_btn {
     margin-left: 270px;
     margin-top: -40px;
-    
 }
+
 .update_yoyaku {
     margin-left: 150px;
     margin-top: 50px;
-   
 }
+
     .update_yoyaku:hover, .confirm_btn:hover {
         cursor: pointer;
         background-color: #46ef24;
@@ -1015,28 +1023,30 @@ div .book {
     .yoyaku_add_title h6 {
         padding: 10px;
     }
-.yoyaku_add_body{
-    max-width:800px;
-    display:flex;
-    flex-direction:row;
 
+.yoyaku_add_body {
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+}
 
+.yoyaku_body_barcode {
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 400px;
+    margin-left: 25px;
+    margin-top: 50px;
 }
-.yoyaku_body_barcode{
-    width:400px;
-    border:1px solid #ccc;
-    border-radius:10px;
-    height:400px;
-    margin-left:25px;
-    margin-top:50px;
-}
-.yoyaku_body_barcode p{
-    margin-top:20px;
-    font-size:25px;
-}
-.yoyaku_body_barcode img{
 
-}
+    .yoyaku_body_barcode p {
+        margin-top: 20px;
+        font-size: 25px;
+    }
+
+    .yoyaku_body_barcode img {
+    }
+
 .yoyaku_body_news {
     width: 320px;
     border: 1px solid #ccc;
@@ -1044,11 +1054,64 @@ div .book {
     height: 400px;
     margin-left: 25px;
     margin-top: 50px;
-    padding-top:80px;
-    text-align:left;
-    padding-left:20px;
-    padding-right:20px;
+    padding-top: 80px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-.yoyaku_body_news p{
 
+    .yoyaku_body_news p {
+    }
+
+/*予約履歴*/
+.yoyaku_list {
+    width:800px;
+}
+
+.yoyaku_list_title {
+    margin-left:50px;
+    width:700px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    height:40px;
+    margin-top:20px;
+    padding-top:8px;
+    padding-left:20px;
+}
+
+    .yoyaku_list_title h6 {
+        font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', HiraKakuPro-W3, Osaka, メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+        font-size:20px;
+    }
+
+.yoyaku_list_body {
+    margin-top:40px;
+
+}
+
+.body_list {
+}
+
+.table {
+    border:1px solid #ccc;
+    margin-left:25px;
+    width:750px;
+}
+.table thead{
+    width:700px;
+    margin-left:50px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    height:40px;
+}
+.table .title{
+    margin-left:40px;
+    text-align:left;
+}
+
+        .table tr td {
+        }
+
+.yoyaku_img {
+    max-width:120px;
 }

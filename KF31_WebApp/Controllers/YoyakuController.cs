@@ -12,6 +12,8 @@ using ZXing.Common;
 using ZXing.QrCode;
 using System.Drawing;
 using EntityWorker.Core.Helper;
+using static System.Reflection.Metadata.BlobBuilder;
+using System.Drawing.Printing;
 
 namespace KF31_WebApp.Controllers
 {
@@ -43,7 +45,7 @@ namespace KF31_WebApp.Controllers
 
             var stock = _context.Stocks
                                 .Include(b => b.Libraty)
-                                .Where(x => x.BookID == BookId);
+                                .Where(x => x.BookID == BookId && x.Quantity >0);
             var libraries = new List<Libraty>();
             foreach (var item in stock)
             {
@@ -61,6 +63,56 @@ namespace KF31_WebApp.Controllers
             return View(model);
 
 
+        }
+        public IActionResult YoyakuList(int page = 1, int pageSize = 20)
+        {
+            CheckUpdateYoyaku();
+            var UserID = HttpContext.Session.GetString("UserId");
+            var yoyakulist = _context.Yoyakus.Include(x=>x.Member).Include(x=>x.Status)
+                                             .Include(x=>x.Stock).Include(x=>x.Stock.Book)
+                                             .Where(x=>x.userID == UserID);
+            if(yoyakulist == null)
+            {
+                return View();
+            }
+            // 本数
+            var totalyoyaku = yoyakulist.Count();
+
+            // 現在のページ
+            var yoyakuToDisplay = yoyakulist
+            .OrderBy(b => b.start_time)
+                .Skip((page - 1) * pageSize) // 前のページスキップ
+                .Take(pageSize) // 20件取る
+                .ToList();
+            var model = new YoyakuListViewModel()
+            {
+                userID = UserID,
+                Yoyaku = yoyakulist,
+                TotalPages = (int)Math.Ceiling(totalyoyaku / (double)pageSize),
+                CurrentPage = page,
+            };
+           
+            return View(model);
+        }
+        public void CheckUpdateYoyaku()
+        {
+            var Yoyaku_list = _context.Yoyakus.Include(x => x.Stock)
+                                              .Include(x => x.Status).AsQueryable();
+            foreach(var item in Yoyaku_list)
+            {
+                var time = DateTime.Now - item.start_time;
+                if (time.TotalHours > 2)
+                {
+                    var stock_item = _context.Stocks.Where(x=>x.StockID == item.StockID).FirstOrDefault();
+                    if (stock_item != null)
+                    {
+                        stock_item.Quantity += 1;
+                    }
+                    item.statusID = "KS01";
+                }
+                _context.SaveChanges();
+            }
+           
         }
         [HttpPost]
         [AutoValidateAntiforgeryToken]
@@ -117,14 +169,11 @@ namespace KF31_WebApp.Controllers
             if (yoyakuViewJson != null)
             {
                 model = JsonConvert.DeserializeObject<YoyakuView>(yoyakuViewJson);
-                Console.WriteLine(model.userID);
-                Console.WriteLine(model.Book.Book_title);
-                Console.WriteLine(model.Book.BookID);
-                Console.WriteLine(model.LibratyID);
-                Console.WriteLine(model.Stock.Count());
                 var yoyaku_model = new Yoyaku();
                 yoyaku_model =   Add_Item(model);
                 _context.Yoyakus.Add(yoyaku_model);
+                var stock_item = _context.Stocks.Where(x => x.StockID == yoyaku_model.StockID).FirstOrDefault();
+                stock_item.Quantity = stock_item.Quantity - 1;
                 _context.SaveChanges();
                 HttpContext.Session.SetString("BarcodeImage", $"data:image/png;base64,{yoyaku_model.Yoyaku_Barcode}");
                 return View();
@@ -139,11 +188,9 @@ namespace KF31_WebApp.Controllers
             var Yoyakulist = _context.Yoyakus.AsQueryable();
             Yoyakulist = Yoyakulist.Include(x => x.Member).Include(x => x.Stock);
             var YoyakuCount = Yoyakulist.Count();
-            Console.WriteLine(YoyakuCount);
             var stock_item = _context.Stocks.Where(x => x.BookID == model.BookID && x.LibratyID == model.LibratyID).FirstOrDefault();
             var YoyakuID = "";
             YoyakuID = model.userID + stock_item.StockID + (YoyakuCount + 1).ToString();
-            Console.WriteLine(YoyakuID);
             var YoyakuBarCode = GenerateBarcode(YoyakuID);
             var yoyaku_model = new Yoyaku()
             {
@@ -153,6 +200,7 @@ namespace KF31_WebApp.Controllers
                 StockID = stock_item.StockID,
                 ReturnTime = model.Return_time,
                 statusID = "YYK01",
+                start_time = DateTime.Now,
                 Yoyaku_Barcode = YoyakuBarCode
             };
             return yoyaku_model;
