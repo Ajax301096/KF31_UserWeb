@@ -11,5 +11,7 @@ namespace KF31_WebApp.Models
         public string? LibratyID { get; set; } 
         public SelectList Libraries { get; set; }
         public DateTime Return_time { get; set; }
+        public string LibratyName { get; set; }
+
     }
 }

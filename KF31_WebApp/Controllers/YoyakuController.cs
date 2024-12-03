@@ -68,9 +68,9 @@ namespace KF31_WebApp.Controllers
         {
             CheckUpdateYoyaku();
             var UserID = HttpContext.Session.GetString("UserId");
-            var yoyakulist = _context.Yoyakus.Include(x=>x.Member).Include(x=>x.Status)
-                                             .Include(x=>x.Stock).Include(x=>x.Stock.Book)
-                                             .Where(x=>x.userID == UserID);
+            var yoyakulist = _context.Yoyakus.Include(x => x.Member).Include(x => x.Status)
+                                             .Include(x => x.Stock).Include(x => x.Stock.Book)
+                                             .Where(x => x.userID == UserID).OrderByDescending(x => x.start_time);
             if(yoyakulist == null)
             {
                 return View();
@@ -152,6 +152,8 @@ namespace KF31_WebApp.Controllers
             }
             else
             {
+
+                model.LibratyName = _context.Libraties.Where(x => x.LibratyID == model.LibratyID).FirstOrDefault().LibretyName;
                 TempData["YoyakuView"] = JsonConvert.SerializeObject(model);
                 return RedirectToAction("YoyakuConfirm", "Yoyaku");
             }
@@ -165,6 +167,7 @@ namespace KF31_WebApp.Controllers
             if (yoyakuViewJson != null)
             {
                 model = JsonConvert.DeserializeObject<YoyakuView>(yoyakuViewJson);
+
             TempData["YoyakuViewConfirm"] = JsonConvert.SerializeObject(model);
                 return View(model);
             }
