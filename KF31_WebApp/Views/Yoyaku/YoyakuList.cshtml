@@ -34,7 +34,7 @@
                                     <img class="yoyaku_img" src="~/picture/@(item.Stock.Book.Book_Image + ".jpeg")" />
                                 </td>
                                 <td class="yoyaku_row2">
-                                    <a href="@Url.Action("YoyakuDetail", "Yoyaku", new { id = item.YoyakuID })">@item.Stock.Book.Book_title</a>
+                                    <a href="@Url.Action("YoyakuDetail", "Yoyaku", new { yoyakuID = item.YoyakuID })">@item.Stock.Book.Book_title</a>
                                 </td>
                                 <td class="yoyaku_row3">
                                   @item.Status.status

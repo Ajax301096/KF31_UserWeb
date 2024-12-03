@@ -101,7 +101,7 @@ namespace KF31_WebApp.Controllers
             foreach(var item in Yoyaku_list)
             {
                 var time = DateTime.Now - item.start_time;
-                if (time.TotalHours > 2)
+                if (time.TotalHours > 2 && item.Status.statusID == "YYK01")
                 {
                     var stock_item = _context.Stocks.Where(x=>x.StockID == item.StockID).FirstOrDefault();
                     if (stock_item != null)
@@ -115,9 +115,16 @@ namespace KF31_WebApp.Controllers
            
         }
 
-        public IActionResult YoyakuDetail(string id)
+        public IActionResult YoyakuDetail(string yoyakuID)
         {
-            return View();
+
+            var yoyaku_item = _context.Yoyakus.Include(x => x.Status).Include(x => x.Stock)
+                                              .Include(x => x.Member).Where(x => x.YoyakuID == yoyakuID).FirstOrDefault();
+            if(yoyaku_item.statusID == "YYK01")
+            {
+                HttpContext.Session.SetString("BarcodeImage", $"data:image/png;base64,{yoyaku_item.Yoyaku_Barcode}");
+            }
+            return View(yoyaku_item);
         }
         [HttpPost]
         [AutoValidateAntiforgeryToken]

@@ -1132,3 +1132,21 @@ div .book {
         color: #2f3536;
         margin-left:30px;
     }
+.cancel_mes{
+    margin-left:70px;
+    margin-top:40px;
+}
+.yoyaku_detail_body{
+    display:flex;
+    flex-direction:row;
+
+}
+.yoyaku_detail_body .yoyaku_body_barcode{
+    padding-top:50px;
+}
+    .yoyaku_detail_body .yoyaku_body_barcode p{
+        margin-left:110px;
+    }
+    .yoyaku_detail_body .yoyaku_body_barcode img{
+        margin-left:50px;
+    }

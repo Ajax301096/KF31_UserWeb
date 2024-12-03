@@ -1,5 +1,39 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model KF31_WebApp.Models.Yoyaku
+
 @{
+    ViewData["Title"] = "貸出詳細";
 }
+<div class="yoyaku_list">
+    <div class="yoyaku_list_title">
+        <h6>貸出詳細</h6>
+    </div>
+    <div class="yoyaku_list_body">
+        @if (Model.statusID == "KS01")
+        {
+            <p class="cancel_mes">期限が切れているため、予約はキャンセルされました。</p>
+        }
+        else
+        {
+            @if (Model.statusID == "YYK01")
+            {
+                <div class="yoyaku_detail_body">
+
+                <div class="yoyaku_body_barcode">
+                    <p>予約バーコード</p>
+                    @if (ViewContext.HttpContext.Session.GetString("BarcodeImage") != null)
+                    {
+                        <img src="@ViewContext.HttpContext.Session.GetString("BarcodeImage")" alt="予約バーコード" />
+                    }
+                </div>
+                <div class="yoyaku_body_news">
+                    <p>注文完了しました！</p>
+                    <p>2時間以内に選択した図書館に来てください。</p>
+                    <p>図書館での予約受け取りの際には、予約バーコードをスタッフに伝えてください。</p>
+                </div>
+                </div>
+            }
+        }
+    </div>
+   
+
+</div>
