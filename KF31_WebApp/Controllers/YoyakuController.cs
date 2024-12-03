@@ -97,7 +97,7 @@ namespace KF31_WebApp.Controllers
         public void CheckUpdateYoyaku()
         {
             var Yoyaku_list = _context.Yoyakus.Include(x => x.Stock)
-                                              .Include(x => x.Status).AsQueryable();
+                                              .Include(x => x.Status).ToList();
             foreach(var item in Yoyaku_list)
             {
                 var time = DateTime.Now - item.start_time;
@@ -113,6 +113,11 @@ namespace KF31_WebApp.Controllers
                 _context.SaveChanges();
             }
            
+        }
+
+        public IActionResult YoyakuDetail(string id)
+        {
+            return View();
         }
         [HttpPost]
         [AutoValidateAntiforgeryToken]

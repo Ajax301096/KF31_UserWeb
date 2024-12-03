@@ -20,12 +20,8 @@
                         <tr>
                             <th>
                             </th>
-                            <th class="title">
-　　　　　　　　　　　　　　　　タイトル
-　　　　　　　　　　　　　　</th>
-                            <th>
-                               最新の状態
-                            </th>                          
+                            <th class="title">タイトル</th>
+                            <th>最新の状態</th>                          
                         </tr>
                     </thead>
                     <tbody>
@@ -34,13 +30,13 @@
                     @foreach (var item in Model.Yoyaku)
                         {
                             <tr>
-                                <td>
+                                <td class="yoyaku_row1">
                                     <img class="yoyaku_img" src="~/picture/@(item.Stock.Book.Book_Image + ".jpeg")" />
                                 </td>
-                                <td>
-                                  <a asp-action="" asp-controller="" >@item.Stock.Book.Book_title</a>
+                                <td class="yoyaku_row2">
+                                    <a href="@Url.Action("YoyakuDetail", "Yoyaku", new { id = item.YoyakuID })">@item.Stock.Book.Book_title</a>
                                 </td>
-                                <td>
+                                <td class="yoyaku_row3">
                                   @item.Status.status
                                 </td>                               
                             </tr>
