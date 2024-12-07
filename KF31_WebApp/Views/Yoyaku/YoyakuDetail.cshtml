@@ -20,6 +20,7 @@
 
                 <div class="yoyaku_body_barcode">
                     <p>予約バーコード</p>
+                    <p class="yoyakuID">@Model.YoyakuID</p>
                     @if (ViewContext.HttpContext.Session.GetString("BarcodeImage") != null)
                     {
                         <img src="@ViewContext.HttpContext.Session.GetString("BarcodeImage")" alt="予約バーコード" />

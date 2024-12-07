@@ -23,6 +23,7 @@ body {
     background: #f4f4f4;
     height: 3000px;
     overflow: visible;
+  
 }
 
 .login_button {
@@ -30,6 +31,12 @@ body {
      */
 }
 
+body.booklist {
+    background-image: url('../picture/pexels-zetong-li-880728-1784578.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
 .custom-item {
     margin-left: 548px;
     width: 120px;
@@ -1090,6 +1097,8 @@ div .book {
 
 }
 
+
+
 .body_list {
 }
 
@@ -1143,10 +1152,6 @@ div .book {
 }
 .yoyaku_detail_body .yoyaku_body_barcode{
     padding-top:50px;
+    text-align:center;
 }
-    .yoyaku_detail_body .yoyaku_body_barcode p{
-        margin-left:110px;
-    }
-    .yoyaku_detail_body .yoyaku_body_barcode img{
-        margin-left:50px;
-    }
+   

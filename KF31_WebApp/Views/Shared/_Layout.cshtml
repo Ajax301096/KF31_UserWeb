@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/KF31_WebApp.styles.css" asp-append-version="true" />
 </head>
-<body>
+<body class="@ViewData["BodyClass"]">
     <header>  
         @{
             var userId = Context.Session.GetString("UserId"); // Lấy thông tin người dùng từ Session

@@ -191,6 +191,7 @@ namespace KF31_WebApp.Controllers
                 stock_item.Quantity = stock_item.Quantity - 1;
                 _context.SaveChanges();
                 HttpContext.Session.SetString("BarcodeImage", $"data:image/png;base64,{yoyaku_model.Yoyaku_Barcode}");
+                HttpContext.Session.SetString("YoyakuID", yoyaku_model.YoyakuID);
                 return View();
             }
             else
@@ -205,7 +206,7 @@ namespace KF31_WebApp.Controllers
             var YoyakuCount = Yoyakulist.Count();
             var stock_item = _context.Stocks.Where(x => x.BookID == model.BookID && x.LibratyID == model.LibratyID).FirstOrDefault();
             var YoyakuID = "";
-            YoyakuID = model.userID + stock_item.StockID + (YoyakuCount + 1).ToString();
+            YoyakuID =  model.LibratyID+"-"+ stock_item.StockID+ model.userID + (YoyakuCount + 1).ToString();
             var YoyakuBarCode = GenerateBarcode(YoyakuID);
             var yoyaku_model = new Yoyaku()
             {
