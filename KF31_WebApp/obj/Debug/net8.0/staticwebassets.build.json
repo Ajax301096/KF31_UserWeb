@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "scjd5WhXpoeaFwK8s0+94qPiFhFWOWK+c8PvMdwKSZ4=",
+  "Hash": "Z2e+8HtvC08sNH6YwKMOw7Z7gpZlw6dvtDNMmI7sJmw=",
   "Source": "KF31_WebApp",
   "BasePath": "_content/KF31_WebApp",
   "Mode": "Default",
@@ -3207,6 +3207,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\picture\\Header_Background.png"
+    },
+    {
+      "Identity": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\images.jpeg",
+      "SourceId": "KF31_WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\",
+      "BasePath": "_content/KF31_WebApp",
+      "RelativePath": "picture/images.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\picture\\images.jpeg"
     },
     {
       "Identity": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\pexels-nina-hill-76946523-11885954.jpg",

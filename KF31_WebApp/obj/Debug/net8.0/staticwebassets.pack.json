@@ -669,6 +669,10 @@
       "PackagePath": "staticwebassets\\picture\\header_Backgroun.jpg"
     },
     {
+      "Id": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\images.jpeg",
+      "PackagePath": "staticwebassets\\picture\\images.jpeg"
+    },
+    {
       "Id": "C:\\Users\\hoany\\OneDrive\\Máy tính\\各部の提出宿題\\システム開発演習２\\KF31_WebApp\\KF31_WebApp\\wwwroot\\picture\\pexels-nina-hill-76946523-11885954.jpg",
       "PackagePath": "staticwebassets\\picture\\pexels-nina-hill-76946523-11885954.jpg"
     },
