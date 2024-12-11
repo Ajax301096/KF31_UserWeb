@@ -36,6 +36,14 @@ body.booklist {
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
+}　
+
+body.account_body{
+
+ }
+body.login_body {
+}
+body.yoyaku_body {
 }
 .custom-item {
     margin-left: 548px;
