@@ -945,8 +945,7 @@ div .book {
     text-align: left;
 }
 
-.userID {
-}
+
 
 .title {
     margin-top: 65px;
@@ -1063,8 +1062,7 @@ div .book {
         font-size: 25px;
     }
 
-    .yoyaku_body_barcode img {
-    }
+   
 
 .yoyaku_body_news {
     width: 320px;
@@ -1166,4 +1164,96 @@ div .book {
     padding-top:50px;
     text-align:center;
 }
-   
+ 
+/*貸出詳細*/
+.Loan_book_body {
+    width: 750px;
+    margin-top: 20px;
+    margin-left: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 320px;
+    display: flex;
+    flex-direction: row;
+}
+.Loan_book_img {
+    width: 250px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left:36px;
+}
+    .Loan_book_img img {
+        margin-top: 20px;
+        max-width: 200px;
+        max-height: 250px;
+        border-radius: 10px;
+
+    }
+.Loan_bor {
+    width: 1px;
+    border: 0.5px solid #ccc;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 35px;
+}
+.Loan_news {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 35px;
+    text-align: left;
+}
+.Loan_news label{
+    font-size:20px;
+}
+.Loan news .title {
+    margin-top: 65px;
+}
+.Loan_news .libraty {
+    margin-top: -190px;
+    margin-left: 166px;
+    width: 195px;
+    height: 64px;
+}
+.Loan_news .returntime {
+    margin-top: 55px;
+    margin-left: 166px;
+    width: 195px;
+}
+.Loan_news .back_yoyaku {
+    margin-left: 160px;
+    margin-top: 50px;
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    display: block;
+    color: #000;
+    font-size: 15px;
+    padding-top: 7px;
+    padding-left: 35px;
+    background-color: #6ea064;
+}
+.Loan_news .top_back {
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    display: block;
+    color: #000;
+    font-size: 15px;
+    padding-top: 7px;
+    padding-left: 20px;
+    background-color: #6ea064;
+    margin-top: -39px;
+    margin-left: 280px;
+}
+    .Loan_news .top_back:hover, .Loan_news .back_yoyaku:hover {
+        cursor: pointer;
+        background-color: #46ef24;
+        color: #fff;
+    }
