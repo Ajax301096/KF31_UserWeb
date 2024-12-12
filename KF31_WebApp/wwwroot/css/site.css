@@ -30,20 +30,24 @@ body {
     /*     margin-left:605px;
      */
 }
+body.account_body, body.booklist, body.login_body, body.yoyaku_body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 body.booklist {
-    background-image: url('../picture/pexels-zetong-li-880728-1784578.jpg');
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center;
+    background-image: url('../picture/H1.jpeg');  
 }　
 
-body.account_body{
-
- }
+body.account_body {
+    background-image: url('../picture/H2.jpeg');
+}
 body.login_body {
+    background-image: url('../picture/H3.jpeg');
 }
 body.yoyaku_body {
+    background-image: url('../picture/H4.jpeg');
 }
 .custom-item {
     margin-left: 548px;

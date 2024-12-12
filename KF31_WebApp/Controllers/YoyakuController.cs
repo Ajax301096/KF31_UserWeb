@@ -118,7 +118,7 @@ namespace KF31_WebApp.Controllers
         public IActionResult YoyakuDetail(string yoyakuID)
         {
 
-            var yoyaku_item = _context.Yoyakus.Include(x => x.Status).Include(x => x.Stock)
+            var yoyaku_item = _context.Yoyakus.Include(x => x.Status).Include(x => x.Stock).Include(x=>x.Stock.Book).Include(x=>x.Stock.Libraty)
                                               .Include(x => x.Member).Where(x => x.YoyakuID == yoyakuID).FirstOrDefault();
             if(yoyaku_item.statusID == "YYK01")
             {
