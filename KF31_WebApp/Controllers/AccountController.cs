@@ -106,7 +106,7 @@ namespace KF31_WebApp.Controllers
             //入力チェックあったら、ここに書く
             if (!IsValidPhoneNumber(member.Tell))
             {
-                ModelState.AddModelError("Tell", "電話番号が正しい形式ではありません。例: 123-456-7890");
+                ModelState.AddModelError("Tell", "電話番号が正しい形式ではありません。");
                 return View(member);
             }
             if (!IsValidEmail(member.mail))
@@ -120,8 +120,6 @@ namespace KF31_WebApp.Controllers
             account.address = member.address;
             _context.SaveChanges();
                 return RedirectToAction("Success", "Account"); 
-
-
         }
         private bool UpdatePassword(string newPassword)
         {
@@ -135,7 +133,7 @@ namespace KF31_WebApp.Controllers
 
         private bool IsValidPhoneNumber(string phoneNumber)
         {
-            var phoneRegex = @"^\d{3}-\d{4}-\d{4}$";
+            var phoneRegex = @"^\d{3,4}-\d{3,4}-\d{3,4}$";
             return System.Text.RegularExpressions.Regex.IsMatch(phoneNumber, phoneRegex);
         }
 
