@@ -21,14 +21,26 @@ html {
 body {
     margin-bottom: 60px;
     background: #f4f4f4;
-    height: 3000px;
+    width: 1515px;
+    height: 2729px;
     overflow: visible;
-  
 }
 
-.login_button {
-    /*     margin-left:605px;
-     */
+
+    
+body.account_body {
+        background-image: url('../picture/account_img.png');
+}
+body.booklist {
+    background-image: url('../picture/book_list.png');
+}
+
+body.login_body {
+    background-image: url('../picture/password_img.png');
+}
+
+body.yoyaku_body {
+    background-image: url('../picture/loan_img.png');
 }
 body.account_body, body.booklist, body.login_body, body.yoyaku_body {
     background-repeat: no-repeat;
@@ -36,19 +48,6 @@ body.account_body, body.booklist, body.login_body, body.yoyaku_body {
     background-position: center;
 }
 
-body.booklist {
-    background-image: url('../picture/booklist_img.jpeg');  
-}　
-
-body.account_body {
-    background-image: url('../picture/account_img.jpg');
-}
-body.login_body {
-    background-image: url('../picture/password_img.jpeg');
-}
-body.yoyaku_body {
-    background-image: url('../picture/loan_img.jpeg');
-}
 .custom-item {
     margin-left: 548px;
     width: 120px;
@@ -1062,7 +1061,7 @@ div .book {
         font-size: 25px;
     }
 
-   
+
 
 .yoyaku_body_news {
     width: 320px;
@@ -1087,14 +1086,14 @@ div .book {
 }
 
 .yoyaku_list_title {
-    margin-left:50px;
-    width:700px;
-    border:1px solid #ccc;
-    border-radius:10px;
-    height:40px;
-    margin-top:20px;
-    padding-top:8px;
-    padding-left:20px;
+    margin-left: 50px;
+    width: 700px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 40px;
+    margin-top: 20px;
+    padding-top: 8px;
+    padding-left: 20px;
 }
 
     .yoyaku_list_title h6 {
@@ -1103,8 +1102,7 @@ div .book {
     }
 
 .yoyaku_list_body {
-    margin-top:40px;
-
+    margin-top: 40px;
 }
 
 
@@ -1113,58 +1111,64 @@ div .book {
 }
 
 .table {
-    border:1px solid #ccc;
-    margin-left:25px;
-    width:750px;
-}
-.table thead{
-    width:700px;
-    margin-left:50px;
-    border:1px solid #ccc;
-    border-radius:10px;
-    height:40px;
-}
-.table .title{
-    margin-left:40px;
-    text-align:left;
-    width:500px;
-    padding-left:50px;
+    border: 1px solid #ccc;
+    margin-left: 25px;
+    width: 750px;
 }
 
-        .table tr td {
-        }
+    .table thead {
+        width: 700px;
+        margin-left: 50px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        height: 40px;
+    }
+
+    .table .title {
+        margin-left: 40px;
+        text-align: left;
+        width: 500px;
+        padding-left: 50px;
+    }
+
+    .table tr td {
+    }
+
     .table > :not(:last-child) > :last-child > * {
         border-bottom-color: #ccc;
     }
-    .yoyaku_row1{
-        width:90px;
-        height:90px;
-       
-    }
+
+.yoyaku_row1 {
+    width: 90px;
+    height: 90px;
+}
+
 .yoyaku_img {
     max-width: 50px;
     margin-left: 20px;
 }
 
-    .yoyaku_row2 a {
-        text-decoration: none;
-        color: #2f3536;
-        margin-left:30px;
-    }
-.cancel_mes{
-    margin-left:70px;
-    margin-top:40px;
+.yoyaku_row2 a {
+    text-decoration: none;
+    color: #2f3536;
+    margin-left: 30px;
 }
-.yoyaku_detail_body{
-    display:flex;
-    flex-direction:row;
 
+.cancel_mes {
+    margin-left: 70px;
+    margin-top: 40px;
 }
-.yoyaku_detail_body .yoyaku_body_barcode{
-    padding-top:50px;
-    text-align:center;
+
+.yoyaku_detail_body {
+    display: flex;
+    flex-direction: row;
 }
- 
+
+    .yoyaku_detail_body .yoyaku_body_barcode {
+        padding-top: 50px;
+        text-align: center;
+    }
+
 /*貸出詳細*/
 .Loan_book_body {
     width: 750px;
@@ -1176,6 +1180,7 @@ div .book {
     display: flex;
     flex-direction: row;
 }
+
 .Loan_book_img {
     width: 250px;
     margin-left: 10px;
@@ -1183,15 +1188,16 @@ div .book {
     border-radius: 15px;
     margin-top: 15px;
     margin-bottom: 15px;
-    padding-left:36px;
+    padding-left: 36px;
 }
+
     .Loan_book_img img {
         margin-top: 20px;
         max-width: 200px;
         max-height: 250px;
         border-radius: 10px;
-
     }
+
 .Loan_bor {
     width: 1px;
     border: 0.5px solid #ccc;
@@ -1199,29 +1205,35 @@ div .book {
     margin-bottom: 25px;
     margin-left: 35px;
 }
+
 .Loan_news {
     margin-top: 25px;
     margin-bottom: 25px;
     margin-left: 35px;
     text-align: left;
 }
-.Loan_news label{
-    font-size:20px;
-}
+
+    .Loan_news label {
+        font-size: 20px;
+    }
+
 .Loan news .title {
     margin-top: 65px;
 }
+
 .Loan_news .libraty {
     margin-top: -190px;
     margin-left: 166px;
     width: 195px;
     height: 64px;
 }
+
 .Loan_news .returntime {
     margin-top: 55px;
     margin-left: 166px;
     width: 195px;
 }
+
 .Loan_news .back_yoyaku {
     margin-left: 160px;
     margin-top: 50px;
@@ -1237,6 +1249,7 @@ div .book {
     padding-left: 35px;
     background-color: #6ea064;
 }
+
 .Loan_news .top_back {
     text-decoration: none;
     width: 100px;
@@ -1252,6 +1265,7 @@ div .book {
     margin-top: -39px;
     margin-left: 280px;
 }
+
     .Loan_news .top_back:hover, .Loan_news .back_yoyaku:hover {
         cursor: pointer;
         background-color: #46ef24;
