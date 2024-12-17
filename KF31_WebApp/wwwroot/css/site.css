@@ -37,17 +37,17 @@ body.account_body, body.booklist, body.login_body, body.yoyaku_body {
 }
 
 body.booklist {
-    background-image: url('../picture/H1.jpeg');  
+    background-image: url('../picture/booklist_img.jpeg');  
 }　
 
 body.account_body {
-    background-image: url('../picture/H2.jpeg');
+    background-image: url('../picture/account_img.jpg');
 }
 body.login_body {
-    background-image: url('../picture/H3.jpeg');
+    background-image: url('../picture/password_img.jpeg');
 }
 body.yoyaku_body {
-    background-image: url('../picture/H4.jpeg');
+    background-image: url('../picture/loan_img.jpeg');
 }
 .custom-item {
     margin-left: 548px;
