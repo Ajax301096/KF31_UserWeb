@@ -21,13 +21,10 @@ html {
 body {
     margin-bottom: 60px;
     background: #f4f4f4;
-    width: 1280px;
-    height: 2275px;
+    width: 1535px;
+    height: 2738px;
     overflow: visible;
 }
-
-
-    
 body.account_body {
         background-image: url('../picture/account_img.png');
 }
